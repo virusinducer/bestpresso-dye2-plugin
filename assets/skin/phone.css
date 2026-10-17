@@ -190,3 +190,21 @@
   .app-shell .brew-metrics .metric__edit-button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
   .app-shell .brew-metrics .metric__edit-button *{pointer-events:none}
 }
+
+/* Value editor: keep the grid inside the screen (its single column otherwise grows to the widest child) */
+@media (max-width:520px), (orientation:landscape) and (max-height:500px){
+  .value-adjuster{
+    grid-template-columns:minmax(0,1fr);
+    padding-top:max(18px,env(safe-area-inset-top));
+    padding-bottom:max(18px,env(safe-area-inset-bottom));
+    padding-left:max(18px,env(safe-area-inset-left));
+    padding-right:max(18px,env(safe-area-inset-right));
+  }
+  .value-adjuster__header{min-width:0}
+  .value-adjuster__body{width:100%;min-width:0}
+  .value-adjuster__variants{width:min(320px,100%)}
+  .value-adjuster__presets{min-width:0}
+  .value-adjuster__preset-row{flex-wrap:nowrap;gap:5px}
+  .value-adjuster__preset{flex:1 1 0;width:auto;min-width:0;max-width:72px;padding:0 2px}
+  .value-adjuster__fixed-preset{flex:1 1 0;width:auto;min-width:0;max-width:142px;padding:0 6px}
+}

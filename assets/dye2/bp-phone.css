@@ -1,0 +1,30 @@
+/* Portrait and phone layout for the DYE2 pages (classes are set by bp-phone.js; stock layout is untouched without them). */
+html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-1\/2.shrink-0),
+html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-\[960px\]) {
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+html.bp-phone-p .flex.flex-1.overflow-hidden > .w-1\/2.shrink-0,
+html.bp-phone-p .flex.flex-1.overflow-hidden > .w-\[960px\] {
+  width: 100%;
+  flex: 0 0 auto;
+  border-right: 0;
+  border-bottom: 1px solid var(--profile-button-outline-color);
+}
+html.bp-phone-p .flex.flex-1.overflow-hidden > .flex-1 { flex: 0 0 auto; }
+html.bp-phone-l .flex.flex-1.overflow-hidden > div,
+html.bp-phone-l .flex.flex-1.overflow-hidden > div > .overflow-hidden {
+  overflow-y: auto;
+}
+html.bp-phone-p #plotly-chart { min-height: 400px; }
+html.bp-phone-l .flex.flex-1.overflow-hidden .mt-auto {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  background: var(--bgmain-color);
+}
+html.bp-phone-p .border-t.h-\[90px\] { gap: 10px; padding-inline: 24px; }
+html.bp-phone-p .border-t.h-\[90px\] button { white-space: nowrap; padding-inline: 16px; font-size: 20px; }
+html.bp-phone-p #es-save-btn { padding-inline: 22px; font-size: 20px; }
+html.bp-phone-p #es-cancel-btn { padding-inline: 14px; font-size: 20px; }
