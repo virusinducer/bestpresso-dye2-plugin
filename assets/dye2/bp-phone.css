@@ -13,17 +13,25 @@ html.bp-phone-p .flex.flex-1.overflow-hidden > .w-\[960px\] {
   border-bottom: 1px solid var(--profile-button-outline-color);
 }
 html.bp-phone-p .flex.flex-1.overflow-hidden > .flex-1 { flex: 0 0 auto; }
-html.bp-phone-l .flex.flex-1.overflow-hidden > div,
-html.bp-phone-l .flex.flex-1.overflow-hidden > div > .overflow-hidden {
+html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div,
+html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div > div {
   overflow-y: auto;
 }
 html.bp-phone-p #plotly-chart { min-height: 400px; }
-html.bp-phone-l .flex.flex-1.overflow-hidden .mt-auto {
-  position: sticky;
+/* Landscape phones: each pane's action row is fixed to the bottom of the screen (the body is the
+   containing block, so bottom:0 is the screen edge) and the panes scroll behind it. */
+html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div > div > :last-child {
+  position: fixed;
   bottom: 0;
-  z-index: 2;
-  background: var(--bgmain-color);
+  width: 50%;
+  height: 84px;
+  padding-inline: 38px;
+  z-index: 5;
+  border-top: 1px solid var(--profile-button-outline-color);
 }
+html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div:first-child > div > :last-child { left: 0; background: var(--box-color); }
+html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div:last-child > div > :last-child { right: 0; background: var(--bgmain-color); margin: 0; }
+html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div > div { padding-bottom: 100px; }
 html.bp-phone-p .border-t.h-\[90px\] { gap: 10px; padding-inline: 24px; }
 html.bp-phone-p .border-t.h-\[90px\] button { white-space: nowrap; padding-inline: 16px; font-size: 20px; }
 html.bp-phone-p #es-save-btn { padding-inline: 22px; font-size: 20px; }
