@@ -43,14 +43,17 @@ test('04-phone-layout copies the stylesheet and imports it after the stock style
   const root = mkdtempSync(join(tmpdir(), 'phone-'))
   mkdirSync(join(root, 'src', 'styles'), { recursive: true })
   writeFileSync(join(root, 'src', 'App.tsx'), "import './styles/index.css'\nimport './styles/homeAnimations.css'\n")
+  writeFileSync(join(root, 'index.html'), '<meta name="viewport" content="width=device-width, initial-scale=1.0" />')
   apply({ root, repoRoot: process.cwd() })
   assert.equal(readFileSync(join(root, 'src', 'styles', 'phone.css'), 'utf8'), readFileSync('assets/skin/phone.css', 'utf8'))
   assert.match(readFileSync(join(root, 'src', 'App.tsx'), 'utf8'), /homeAnimations\.css'\nimport '\.\/styles\/phone\.css'/)
+  assert.match(readFileSync(join(root, 'index.html'), 'utf8'), /viewport-fit=cover/)
 })
 
 test('04-phone-layout fails loudly when the import anchor moves', () => {
   const root = mkdtempSync(join(tmpdir(), 'phone-'))
   mkdirSync(join(root, 'src', 'styles'), { recursive: true })
   writeFileSync(join(root, 'src', 'App.tsx'), "import './styles/index.css'\n")
+  writeFileSync(join(root, 'index.html'), '<meta name="viewport" content="width=device-width, initial-scale=1.0" />')
   assert.throws(() => apply({ root, repoRoot: process.cwd() }), /matched 0 times/)
 })

@@ -172,3 +172,21 @@
   .app-shell--utilities-collapsed .brew-metrics .metric__edit-indicator{display:none}
   .app-shell--utilities-collapsed .brew-metrics .metric__subtext,.app-shell--utilities-collapsed .brew-metrics .metric [class*="pill"]{font-size:10px;padding-inline:6px;max-width:100%;white-space:nowrap}
 }
+
+/* Keep the top bar clear of the Dynamic Island / notch and the bottom clear of the home indicator.
+   env() is 0 unless the viewport uses viewport-fit=cover (set by 04-phone-layout), and 0 elsewhere. */
+@media (max-width:520px), (orientation:landscape) and (max-height:500px){
+  .app-shell{
+    padding-top:max(12px,env(safe-area-inset-top));
+    padding-bottom:max(14px,env(safe-area-inset-bottom));
+    padding-left:max(12px,env(safe-area-inset-left));
+    padding-right:max(12px,env(safe-area-inset-right));
+  }
+}
+
+/* iOS Safari can drop taps on absolutely positioned labels inside a button.
+   Let the label pass taps straight to the metric button so the whole column stays tappable. */
+@media (max-width:520px), (orientation:landscape) and (max-height:500px){
+  .app-shell .brew-metrics .metric__edit-button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  .app-shell .brew-metrics .metric__edit-button *{pointer-events:none}
+}

@@ -15,4 +15,11 @@ export function apply({ root, repoRoot }) {
     "import './styles/homeAnimations.css'\nimport './styles/phone.css'",
     'homeAnimations import',
   )
+  // Let env(safe-area-inset-*) report the notch / Dynamic Island so phone.css can keep clear of it.
+  replaceOnce(
+    join(root, 'index.html'),
+    'content="width=device-width, initial-scale=1.0"',
+    'content="width=device-width, initial-scale=1.0, viewport-fit=cover"',
+    'viewport meta',
+  )
 }
