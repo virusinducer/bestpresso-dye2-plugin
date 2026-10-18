@@ -1,10 +1,10 @@
 name: Build and release
 
-# Daily: look for new Bestpresso or DYE2 tags (betas and patches included) and, if either moved,
+# Every 6 hours: look for new Bestpresso or DYE2 tags (betas and patches included) and, if either moved,
 # rebuild both, test, and publish. Also runs when the patches or tooling change, and on demand.
 on:
   schedule:
-    - cron: '17 4 * * *'
+    - cron: '17 */6 * * *'
   push:
     branches: [main]
     paths:

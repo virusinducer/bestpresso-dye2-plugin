@@ -8,7 +8,7 @@ a Decaid plugin plus a patched skin, rebuilt automatically whenever either upstr
 - **Tapping it opens DYE2** with a return link, so you land back in Bestpresso.
 - **Bestpresso look for DYE2.** Dark theme, green accents and the Bestpresso-style value slider are applied
   to DYE2 at build time (`patches/dye2/03-restyle.mjs`, rules in `assets/dye2/`).
-- **Updates itself.** A daily workflow checks `xinghendri/bestpresso` and `decentespresso/dye2` for new
+- **Updates itself.** Every 6 hours a workflow checks `xinghendri/bestpresso` and `decentespresso/dye2` for new
   tags (betas and patches included), rebuilds both, tests them and publishes.
 
 ## Install
@@ -53,7 +53,7 @@ The skin installs as `bestpresso-dye` ("Bestpresso + DYE2"), next to stock Bestp
 
 - The plugin version is exactly the DYE2 version it is built from (DYE2 `v0.1.19` gives plugin `0.1.19`).
   The skin version is exactly the Bestpresso version (`0.1.32-patch005`). Nothing of ours is added.
-- A new DYE2 or Bestpresso release is picked up daily and published under its own new version, so
+- A new DYE2 or Bestpresso release is picked up within 6 hours and published under its own new version, so
   Decaid sees a normal update.
 - When only our patches change (a fix to the button or the restyle), the version stays the same, so
   Decaid does not offer an update. Remove and reinstall the plugin or skin to pick it up.
