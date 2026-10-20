@@ -25,9 +25,9 @@ export function renderBestpressoButton(request: HttpRequest): HttpResponse {
   const plugin = join(src, 'plugin.ts')
   replaceOnce(
     plugin,
-    'import { refreshRecentFavourites } from "./utils/recent-favs";',
-    'import { refreshRecentFavourites } from "./utils/recent-favs";\nimport { renderBestpressoButton } from "./utils/bestpresso-button";',
-    'recent-favs import',
+    'import { renderPlotlyAsset } from "./utils/plotly-asset";',
+    'import { renderPlotlyAsset } from "./utils/plotly-asset";\nimport { renderBestpressoButton } from "./utils/bestpresso-button";',
+    'plotly-asset import',
   )
   replaceOnce(
     plugin,
