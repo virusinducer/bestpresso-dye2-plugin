@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { replaceOnce } from '../../scripts/lib/patch.mjs'
 
@@ -10,16 +10,40 @@ export function apply({ root, repoRoot }) {
   const src = join(root, 'dye2-plugin', 'src')
 
   // 1. Small anchored edits (each anchor must match exactly once).
+  // DYE2 v0.1.24 and later ship a dark mode: colours became theme tokens, so a rule can carry
+  // find_themed (same edit, anchored on the token text), skip_themed (upstream's token covers it)
+  // or only_themed (an edit that only exists in the themed source). This fork stays light-themed
+  // and applies its own look on top, so upstream's dark mode is switched off below.
+  const themed = existsSync(join(src, 'utils', 'theme.ts'))
   const rules = JSON.parse(read('restyle.rules.json'))
   for (const [i, rule] of rules.entries()) {
-    replaceOnce(join(root, rule.file), rule.find, rule.replace, `restyle rule ${i} (${rule.file})`)
+    if (themed ? rule.skip_themed : rule.only_themed) continue
+    const find = themed && rule.find_themed ? rule.find_themed : rule.find
+    replaceOnce(join(root, rule.file), find, rule.replace, `restyle rule ${i} (${rule.file})`)
+  }
+  if (themed) {
+    replaceOnce(
+      join(src, 'utils', 'theme.ts'),
+      "    theme: param || remote || cached || 'light',",
+      "    theme: 'light', // dark mode switched off in this fork",
+      'upstream dark mode off',
+    )
+    // Upstream's test asserts that ?theme=dark wins, which is exactly what is switched off here.
+    // package.json lists the file by name, so it is stubbed rather than deleted.
+    writeFileSync(
+      join(root, 'dye2-plugin', 'test', 'theme.test.mjs'),
+      "// Stubbed by bestpresso-dye2-plugin: upstream's dark mode is switched off in this fork.\nconsole.log('theme tests skipped (dark mode off)');\n",
+    )
   }
 
   // 2. Bestpresso-look CSS, appended to the shell's variable/fallback stylesheet.
+  const focusRule = themed
+    ? '    .re-input-row:focus-within .re-input { color: var(--input-text); }'
+    : '    .re-input-row:focus-within .re-input { color: #111; }'
   replaceOnce(
     join(src, 'utils', 'dev-shell.ts'),
-    '    .re-input-row:focus-within .re-input { color: #111; }\n  `;\n}',
-    `    .re-input-row:focus-within .re-input { color: #111; }\n${read('bp-look.css')}  \`;\n}`,
+    `${focusRule}\n  \`;\n}`,
+    `${focusRule}\n${read('bp-look.css')}  \`;\n}`,
     'cssVarFallbacks end',
   )
 

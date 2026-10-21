@@ -17,12 +17,14 @@
  {
   "file": "dye2-plugin/src/pages/grinders.ts",
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
-  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
  },
  {
   "file": "dye2-plugin/src/pages/grinders.ts",
   "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
-  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 14px; font-size: 19px;"
  },
  {
   "file": "dye2-plugin/src/pages/grinders.ts",
@@ -47,12 +49,14 @@
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
-  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
   "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
-  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 14px; font-size: 19px;"
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
@@ -77,12 +81,14 @@
  {
   "file": "dye2-plugin/src/pages/equipment.ts",
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
-  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
  },
  {
   "file": "dye2-plugin/src/pages/equipment.ts",
   "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
-  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 14px; font-size: 19px;"
  },
  {
   "file": "dye2-plugin/src/pages/equipment.ts",
@@ -122,7 +128,8 @@
  {
   "file": "dye2-plugin/src/pages/bean-picker.ts",
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
-  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
  },
  {
   "file": "dye2-plugin/src/pages/grinder-picker.ts",
@@ -152,12 +159,14 @@
  {
   "file": "dye2-plugin/src/pages/grinder-picker.ts",
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
-  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
  },
  {
   "file": "dye2-plugin/src/pages/grinder-picker.ts",
   "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
-  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 14px; font-size: 19px;"
  },
  {
   "file": "dye2-plugin/src/pages/grinder-picker.ts",
@@ -192,12 +201,14 @@
  {
   "file": "dye2-plugin/src/pages/basket-picker.ts",
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
-  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
  },
  {
   "file": "dye2-plugin/src/pages/basket-picker.ts",
   "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
-  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;",
+  "find_themed": "    background: var(--field-bg); padding: 0 14px; font-size: 19px;"
  },
  {
   "file": "dye2-plugin/src/pages/basket-picker.ts",
@@ -237,7 +248,8 @@
  {
   "file": "dye2-plugin/src/pages/profile-picker.ts",
   "find": "    width: 100%; height: 54px; border-radius: 12px; border: none; background: #EDF0F4;",
-  "replace": "    width: 100%; height: 54px; border-radius: 12px; border: none; background: var(--dye-field);"
+  "replace": "    width: 100%; height: 54px; border-radius: 12px; border: none; background: var(--dye-field);",
+  "find_themed": "    width: 100%; height: 54px; border-radius: 12px; border: none; background: var(--field-bg);"
  },
  {
   "file": "dye2-plugin/src/pages/roasters.ts",
@@ -267,7 +279,8 @@
  {
   "file": "dye2-plugin/src/utils/date-picker.ts",
   "find": "  .dye-dp-title { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); }\n  .dye-dp-nav {\n    width: 52px; height: 52px; border-radius: 15px; border: 2px solid #C5CDDA;\n    background: var(--box-color); color: var(--mimoja-blue);",
-  "replace": "  .dye-dp-title { font-size: 24px; font-weight: 700; color: var(--dye-label); }\n  .dye-dp-nav {\n    width: 52px; height: 52px; border-radius: 15px; border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);"
+  "replace": "  .dye-dp-title { font-size: 24px; font-weight: 700; color: var(--dye-label); }\n  .dye-dp-nav {\n    width: 52px; height: 52px; border-radius: 15px; border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);",
+  "find_themed": "  .dye-dp-title { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); }\n  .dye-dp-nav {\n    width: 52px; height: 52px; border-radius: 15px; border: 2px solid var(--chip-stroke);\n    background: var(--box-color); color: var(--mimoja-blue);"
  },
  {
   "file": "dye2-plugin/src/utils/date-picker.ts",
@@ -277,7 +290,8 @@
  {
   "file": "dye2-plugin/src/utils/date-picker.ts",
   "find": "  .dye-dp-day:active { background: #EDEDED; }\n  .dye-dp-day.dye-dp-muted { color: #C5CDDA; cursor: default; }\n  .dye-dp-day.dye-dp-today { border-color: #C5CDDA; }\n  .dye-dp-day.dye-dp-sel { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }",
-  "replace": "  .dye-dp-day:active { background: var(--profile-button-background-color); }\n  .dye-dp-day.dye-dp-muted { color: var(--profile-button-outline-color); cursor: default; }\n  .dye-dp-day.dye-dp-today { border-color: var(--profile-button-outline-color); }\n  .dye-dp-day.dye-dp-sel { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }"
+  "replace": "  .dye-dp-day:active { background: var(--profile-button-background-color); }\n  .dye-dp-day.dye-dp-muted { color: var(--profile-button-outline-color); cursor: default; }\n  .dye-dp-day.dye-dp-today { border-color: var(--profile-button-outline-color); }\n  .dye-dp-day.dye-dp-sel { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }",
+  "find_themed": "  .dye-dp-day:active { background: var(--button-grey); }\n  .dye-dp-day.dye-dp-muted { color: var(--chip-stroke); cursor: default; }\n  .dye-dp-day.dye-dp-today { border-color: var(--chip-stroke); }\n  .dye-dp-day.dye-dp-sel { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }"
  },
  {
   "file": "dye2-plugin/src/utils/date-picker.ts",
@@ -307,7 +321,8 @@
  {
   "file": "dye2-plugin/src/utils/shared-components.ts",
   "find": "    width: 72px; height: 72px; background: #EDEDED;",
-  "replace": "    width: 72px; height: 72px; background: var(--profile-button-background-color);"
+  "replace": "    width: 72px; height: 72px; background: var(--profile-button-background-color);",
+  "find_themed": "    width: 72px; height: 72px; background: var(--button-grey);"
  },
  {
   "file": "dye2-plugin/src/utils/shared-components.ts",
@@ -342,27 +357,32 @@
  {
   "file": "dye2-plugin/src/utils/chart.ts",
   "find": "    font: { family: 'Inter, sans-serif', color: '#64748b', size: 13 },",
-  "replace": "    font: { family: 'Inter, sans-serif', color: '#a8a29e', size: 13 },"
+  "replace": "    font: { family: 'Inter, sans-serif', color: '#a8a29e', size: 13 },",
+  "skip_themed": true
  },
  {
   "file": "dye2-plugin/src/utils/chart.ts",
   "find": "    xaxis: {\n      gridcolor:  '#e2e8f0',\n      linecolor:  '#e2e8f0',\n      tickcolor:  '#e2e8f0',\n      tickfont:   { color: '#64748b' },",
-  "replace": "    xaxis: {\n      gridcolor:  'rgba(255,255,255,0.10)',\n      linecolor:  'rgba(255,255,255,0.10)',\n      tickcolor:  'rgba(255,255,255,0.10)',\n      tickfont:   { color: '#a8a29e' },"
+  "replace": "    xaxis: {\n      gridcolor:  'rgba(255,255,255,0.10)',\n      linecolor:  'rgba(255,255,255,0.10)',\n      tickcolor:  'rgba(255,255,255,0.10)',\n      tickfont:   { color: '#a8a29e' },",
+  "skip_themed": true
  },
  {
   "file": "dye2-plugin/src/utils/chart.ts",
   "find": "    yaxis: {\n      gridcolor:  '#e2e8f0',\n      linecolor:  '#e2e8f0',\n      tickcolor:  '#e2e8f0',\n      tickfont:   { color: '#64748b' },",
-  "replace": "    yaxis: {\n      gridcolor:  'rgba(255,255,255,0.10)',\n      linecolor:  'rgba(255,255,255,0.10)',\n      tickcolor:  'rgba(255,255,255,0.10)',\n      tickfont:   { color: '#a8a29e' },"
+  "replace": "    yaxis: {\n      gridcolor:  'rgba(255,255,255,0.10)',\n      linecolor:  'rgba(255,255,255,0.10)',\n      tickcolor:  'rgba(255,255,255,0.10)',\n      tickfont:   { color: '#a8a29e' },",
+  "skip_themed": true
  },
  {
   "file": "dye2-plugin/src/utils/chart.ts",
   "find": "    pressure:          { x: [], y: [], name: 'Pressure',         type: 'scatter', mode: 'lines', line: { color: '#17c29a', width: 2 },              hoverinfo: 'name' },\n    flow:              { x: [], y: [], name: 'Flow',             type: 'scatter', mode: 'lines', line: { color: '#0358cf', width: 2 },              hoverinfo: 'name' },",
-  "replace": "    pressure:          { x: [], y: [], name: 'Pressure',         type: 'scatter', mode: 'lines', line: { color: '#3dc078', width: 2 },              hoverinfo: 'name' },\n    flow:              { x: [], y: [], name: 'Flow',             type: 'scatter', mode: 'lines', line: { color: '#4d8ff0', width: 2 },              hoverinfo: 'name' },"
+  "replace": "    pressure:          { x: [], y: [], name: 'Pressure',         type: 'scatter', mode: 'lines', line: { color: '#3dc078', width: 2 },              hoverinfo: 'name' },\n    flow:              { x: [], y: [], name: 'Flow',             type: 'scatter', mode: 'lines', line: { color: '#4d8ff0', width: 2 },              hoverinfo: 'name' },",
+  "skip_themed": true
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
   "find": "    color: #B6C3D7;",
-  "replace": "    color: #a8a29e;"
+  "replace": "    color: #a8a29e;",
+  "find_themed": "    color: var(--tab-idle);"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
@@ -372,7 +392,8 @@
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
   "find": "    border: 2px solid #C5CDDA;\n    background: white;\n    color: #5F7BA8;",
-  "replace": "    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color);\n    color: var(--dye-label);"
+  "replace": "    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color);\n    color: var(--dye-label);",
+  "find_themed": "    border: 2px solid var(--chip-stroke);\n    background: var(--card-bg);\n    color: var(--chip-text);"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
@@ -392,12 +413,13 @@
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
   "find": "    <div class=\"flex flex-col w-1/2 shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-hidden\">",
-  "replace": "    <div class=\"flex flex-col w-1/2 shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-hidden\">"
+  "replace": "    <div class=\"flex flex-col w-1/2 shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-hidden\">",
+  "find_themed": "    <div class=\"flex flex-col w-1/2 shrink-0 bg-[var(--card-bg)] border-r border-[var(--profile-button-outline-color)] overflow-hidden\">"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
-  "find": "            <div id=\"dye-last-shot-label\" class=\"text-[var(--mimoja-blue)] font-semibold text-[30px] leading-[1.2]\">Last Shot: \u2014</div>",
-  "replace": "            <div id=\"dye-last-shot-label\" class=\"text-[var(--dye-label)] font-semibold text-[30px] leading-[1.2]\">Last Shot: \u2014</div>"
+  "find": "            <div id=\"dye-last-shot-label\" class=\"text-[var(--mimoja-blue)] font-semibold text-[30px] leading-[1.2]\">Last Shot: —</div>",
+  "replace": "            <div id=\"dye-last-shot-label\" class=\"text-[var(--dye-label)] font-semibold text-[30px] leading-[1.2]\">Last Shot: —</div>"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
@@ -436,33 +458,38 @@
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
-  "find": "          <div id=\"dye-profile-name\" class=\"text-[var(--mimoja-blue)] font-semibold text-[24px] leading-[1.2] text-center truncate cursor-pointer\" title=\"Choose a profile\">\u2014</div>",
-  "replace": "          <div id=\"dye-profile-name\" class=\"text-[var(--dye-label)] font-semibold text-[24px] leading-[1.2] text-center truncate cursor-pointer\" title=\"Choose a profile\">\u2014</div>"
+  "find": "          <div id=\"dye-profile-name\" class=\"text-[var(--mimoja-blue)] font-semibold text-[24px] leading-[1.2] text-center truncate cursor-pointer\" title=\"Choose a profile\">—</div>",
+  "replace": "          <div id=\"dye-profile-name\" class=\"text-[var(--dye-label)] font-semibold text-[24px] leading-[1.2] text-center truncate cursor-pointer\" title=\"Choose a profile\">—</div>"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
-  "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">Dose</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-dose-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-dose-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-dose-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
-  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">Dose</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-dose-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-dose-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-dose-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+  "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">Dose</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-dose-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-dose-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-dose-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">Dose</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-dose-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-dose-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-dose-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "find_themed": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">Dose</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-dose-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-dose-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-dose-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
   "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">Drink</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-drink-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
-  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">Drink</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-drink-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">Drink</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-drink-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "find_themed": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">Drink</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-drink-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
   "find": "                  <button id=\"dye-drink-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
-  "replace": "                  <button id=\"dye-drink-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+  "replace": "                  <button id=\"dye-drink-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "find_themed": "                  <button id=\"dye-drink-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
-  "find": "                <span id=\"dye-grind-label\" class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px] cursor-pointer\">Grind</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-grind-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-grind-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-grind-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
-  "replace": "                <span id=\"dye-grind-label\" class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px] cursor-pointer\">Grind</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-grind-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-grind-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-grind-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+  "find": "                <span id=\"dye-grind-label\" class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px] cursor-pointer\">Grind</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-grind-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-grind-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-grind-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                <span id=\"dye-grind-label\" class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px] cursor-pointer\">Grind</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-grind-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-grind-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-grind-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "find_themed": "                <span id=\"dye-grind-label\" class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px] cursor-pointer\">Grind</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-grind-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-grind-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-grind-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
-  "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">RPM</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-rpm-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-rpm-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-rpm-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
-  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">RPM</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-rpm-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-rpm-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-rpm-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+  "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">RPM</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-rpm-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-rpm-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-rpm-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">RPM</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-rpm-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-rpm-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-rpm-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "find_themed": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">RPM</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-rpm-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-rpm-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">—</span>\n                  <button id=\"dye-rpm-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--button-grey)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
@@ -497,7 +524,8 @@
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
   "find": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:2px 4px';",
-  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';"
+  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';",
+  "find_themed": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--input-bg);color:inherit;outline:none;padding:2px 4px';"
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
@@ -547,22 +575,26 @@
  {
   "file": "dye2-plugin/src/pages/edit-shot.ts",
   "find": "    <div class=\"flex flex-col w-[960px] shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[32px] gap-[28px]\">",
-  "replace": "    <div class=\"flex flex-col w-[960px] shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[32px] gap-[28px]\">"
+  "replace": "    <div class=\"flex flex-col w-[960px] shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[32px] gap-[28px]\">",
+  "find_themed": "    <div class=\"flex flex-col w-[960px] shrink-0 bg-[var(--card-bg)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[32px] gap-[28px]\">"
  },
  {
   "file": "dye2-plugin/src/pages/edit-shot.ts",
   "find": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:2px 4px';",
-  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';"
+  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';",
+  "find_themed": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--input-bg);color:inherit;outline:none;padding:2px 4px';"
  },
  {
   "file": "dye2-plugin/src/pages/edit-shot.ts",
   "find": "  input.style.cssText = 'width:100%;font:inherit;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:4px 8px';",
-  "replace": "  input.style.cssText = 'width:100%;font:inherit;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:4px 8px';"
+  "replace": "  input.style.cssText = 'width:100%;font:inherit;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:4px 8px';",
+  "find_themed": "  input.style.cssText = 'width:100%;font:inherit;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--input-bg);color:inherit;outline:none;padding:4px 8px';"
  },
  {
   "file": "dye2-plugin/src/pages/auto-favs.ts",
   "find": "    --af-border: #C9C9C9;\n    --af-text: #121212;\n    --af-action: var(--mimoja-blue, #385A92);\n    --af-tab-stroke: #C5CDDA;\n    --af-tab-text: #5F7BA8;",
-  "replace": "    --af-border: rgba(255,255,255,0.28);\n    --af-text: var(--text-primary, #121212);\n    --af-action: var(--mimoja-blue, #385A92);\n    --af-tab-stroke: var(--profile-button-outline-color);\n    --af-tab-text: var(--dye-label);"
+  "replace": "    --af-border: rgba(255,255,255,0.28);\n    --af-text: var(--text-primary, #121212);\n    --af-action: var(--mimoja-blue, #385A92);\n    --af-tab-stroke: var(--profile-button-outline-color);\n    --af-tab-text: var(--dye-label);",
+  "find_themed": "    --af-border: var(--box-border);\n    --af-text: var(--ink);\n    --af-action: var(--mimoja-blue, #385A92);\n    --af-tab-stroke: var(--chip-stroke);\n    --af-tab-text: var(--chip-text);"
  },
  {
   "file": "dye2-plugin/src/pages/auto-favs.ts",
@@ -627,32 +659,38 @@
  {
   "file": "dye2-plugin/src/pages/auto-fav-edit.ts",
   "find": "    <div class=\"flex flex-col w-[720px] shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[48px] py-[36px] gap-[28px]\">",
-  "replace": "    <div class=\"flex flex-col w-[720px] shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[48px] py-[36px] gap-[28px]\">"
+  "replace": "    <div class=\"flex flex-col w-[720px] shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[48px] py-[36px] gap-[28px]\">",
+  "find_themed": "    <div class=\"flex flex-col w-[720px] shrink-0 bg-[var(--card-bg)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[48px] py-[36px] gap-[28px]\">"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "  /* Figma 2396:728: fixed 270x60 pills, stroke #C5CDDA, text #5F7BA8 */",
-  "replace": "  /* Figma 2396:728: fixed 270x60 pills, stroke var(--profile-button-outline-color), text var(--dye-label) */"
+  "replace": "  /* Figma 2396:728: fixed 270x60 pills, stroke var(--profile-button-outline-color), text var(--dye-label) */",
+  "find_themed": "  /* Figma 2396:728: fixed 270x60 pills, stroke var(--chip-stroke), text var(--chip-text) */"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 21px;\n    border: 2px solid #C5CDDA;\n    background: var(--box-color); color: #5F7BA8;",
-  "replace": "    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 21px;\n    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);"
+  "replace": "    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 21px;\n    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);",
+  "find_themed": "    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 21px;\n    border: 2px solid var(--chip-stroke);\n    background: var(--box-color); color: var(--chip-text);"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "  .re-tab.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }\n  .re-label { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); margin-bottom: 8px; }\n  /* Figma 2396:747: label sits inline beside the input, 164px wide */\n  .re-field-label { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); width: 164px; flex-shrink: 0; }\n  /* Figma 2396:749: one bordered box (2px #C9C9C9, square) holding text + edit icon */",
-  "replace": "  .re-tab.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }\n  .re-label { font-size: 24px; font-weight: 700; color: var(--dye-label); margin-bottom: 8px; }\n  /* Figma 2396:747: label sits inline beside the input, 164px wide */\n  .re-field-label { font-size: 24px; font-weight: 700; color: var(--dye-label); width: 164px; flex-shrink: 0; }\n  /* Figma 2396:749: one bordered box (2px rgba(255,255,255,0.28), square) holding text + edit icon */"
+  "replace": "  .re-tab.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }\n  .re-label { font-size: 24px; font-weight: 700; color: var(--dye-label); margin-bottom: 8px; }\n  /* Figma 2396:747: label sits inline beside the input, 164px wide */\n  .re-field-label { font-size: 24px; font-weight: 700; color: var(--dye-label); width: 164px; flex-shrink: 0; }\n  /* Figma 2396:749: one bordered box (2px rgba(255,255,255,0.28), square) holding text + edit icon */",
+  "find_themed": "  .re-tab.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }\n  .re-label { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); margin-bottom: 8px; }\n  /* Figma 2396:747: label sits inline beside the input, 164px wide */\n  .re-field-label { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); width: 164px; flex-shrink: 0; }\n  /* Figma 2396:749: one bordered box (2px var(--box-border), square) holding text + edit icon */"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "    border: 2px solid #C9C9C9; background: var(--box-color);",
-  "replace": "    border: 2px solid rgba(255,255,255,0.28); background: var(--box-color);"
+  "replace": "    border: 2px solid rgba(255,255,255,0.28); background: var(--box-color);",
+  "find_themed": "    border: 2px solid var(--box-border); background: var(--box-color);"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "    font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.2;\n    border: 2px solid #C5CDDA;\n    background: var(--box-color); color: #5F7BA8;",
-  "replace": "    font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.2;\n    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);"
+  "replace": "    font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.2;\n    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);",
+  "find_themed": "    font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.2;\n    border: 2px solid var(--chip-stroke);\n    background: var(--box-color); color: var(--chip-text);"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
@@ -672,7 +710,8 @@
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "    color: #B6C3D7;",
-  "replace": "    color: #a8a29e;"
+  "replace": "    color: #a8a29e;",
+  "find_themed": "    color: var(--tab-idle);"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
@@ -702,12 +741,14 @@
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "    <div id=\"re-left\" class=\"flex flex-col w-1/2 shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">",
-  "replace": "    <div id=\"re-left\" class=\"flex flex-col w-1/2 shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">"
+  "replace": "    <div id=\"re-left\" class=\"flex flex-col w-1/2 shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">",
+  "find_themed": "    <div id=\"re-left\" class=\"flex flex-col w-1/2 shrink-0 bg-[var(--card-bg)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "    <div id=\"re-right\" class=\"flex flex-col flex-1 bg-white overflow-y-auto px-[38px] py-[28px] gap-[30px]\">\n      <div class=\"text-[30px] font-bold text-[var(--mimoja-blue)]\">Dashboard Variables</div>",
-  "replace": "    <div id=\"re-right\" class=\"flex flex-col flex-1 bg-[var(--box-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">\n      <div class=\"text-[30px] font-bold text-[var(--dye-label)]\">Dashboard Variables</div>"
+  "replace": "    <div id=\"re-right\" class=\"flex flex-col flex-1 bg-[var(--box-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">\n      <div class=\"text-[30px] font-bold text-[var(--dye-label)]\">Dashboard Variables</div>",
+  "find_themed": "    <div id=\"re-right\" class=\"flex flex-col flex-1 bg-[var(--card-bg)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">\n      <div class=\"text-[30px] font-bold text-[var(--mimoja-blue)]\">Dashboard Variables</div>"
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
@@ -717,7 +758,8 @@
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:2px 4px';",
-  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';"
+  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';",
+  "find_themed": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--input-bg);color:inherit;outline:none;padding:2px 4px';"
  },
  {
   "file": "dye2-plugin/src/pages/bc-import.ts",
@@ -733,5 +775,23 @@
   "file": "dye2-plugin/src/pages/bc-import.ts",
   "find": "  .bc-report .bc-upd  { color: var(--mimoja-blue); }",
   "replace": "  .bc-report .bc-upd  { color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "only_themed": true,
+  "find": "function chartAxisText() { return chartIsDark() ? '#606579' : '#64748b'; }",
+  "replace": "function chartAxisText() { return '#a8a29e'; }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "only_themed": true,
+  "find": "function chartGridColor() { return chartIsDark() ? '#1E202B' : '#e2e8f0'; }",
+  "replace": "function chartGridColor() { return 'rgba(255,255,255,0.10)'; }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "only_themed": true,
+  "find": "function chartAxisLine() { return chartIsDark() ? '#606579' : '#e2e8f0'; }",
+  "replace": "function chartAxisLine() { return 'rgba(255,255,255,0.10)'; }"
  }
 ]
