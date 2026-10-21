@@ -116,9 +116,17 @@ jobs:
 
       - name: Record what was built
         if: steps.gate.outputs.publish == 'true'
+        env:
+          BP: ${{ steps.upstream.outputs.bestpresso }}
+          D2: ${{ steps.upstream.outputs.dye2 }}
         run: |
-          printf '{\n  "bestpresso": "%s",\n  "dye2": "%s"\n}\n' \
-            "${{ steps.upstream.outputs.bestpresso }}" "${{ steps.upstream.outputs.dye2 }}" > upstream.json
+          node -e '
+            const fs = require("fs");
+            const prev = JSON.parse(fs.readFileSync("upstream.json", "utf8"));
+            const next = { bestpresso: process.env.BP, dye2: process.env.D2 };
+            if (prev.skip) next.skip = prev.skip;
+            fs.writeFileSync("upstream.json", JSON.stringify(next, null, 2) + "\n");
+          '
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add upstream.json

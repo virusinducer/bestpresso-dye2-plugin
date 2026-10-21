@@ -21,8 +21,11 @@ function remoteTags(repo) {
 }
 
 const pinned = JSON.parse(readFileSync(join(repoRoot, 'upstream.json'), 'utf8'))
-const bestpresso = values.bestpresso || latestTag(remoteTags('xinghendri/bestpresso'))
-const dye2 = values.dye2 || latestTag(remoteTags('decentespresso/dye2'))
+// upstream.json may list tags to ignore, e.g. { "skip": { "dye2": ["v0.1.24"] } }.
+const skip = pinned.skip || {}
+const usable = (repo, key) => remoteTags(repo).filter((tag) => !(skip[key] || []).includes(tag))
+const bestpresso = values.bestpresso || latestTag(usable('xinghendri/bestpresso', 'bestpresso'))
+const dye2 = values.dye2 || latestTag(usable('decentespresso/dye2', 'dye2'))
 if (!bestpresso || !dye2) throw new Error(`could not resolve upstream tags (bestpresso=${bestpresso}, dye2=${dye2})`)
 
 const result = {
