@@ -103,33 +103,39 @@
  {
   "file": "dye2-plugin/src/pages/bean-picker.ts",
   "find": "    text-align: center;\n    color: var(--mimoja-blue);",
-  "replace": "    text-align: center;\n    color: var(--dye-label);"
+  "replace": "    text-align: center;\n    color: var(--dye-label);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/bean-picker.ts",
   "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    border-color: var(--mimoja-blue);",
-  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);"
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/bean-picker.ts",
   "find": "    border-color: var(--mimoja-blue);\n    color: #fff;",
-  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);"
+  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/bean-picker.ts",
   "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
-  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/bean-picker.ts",
   "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    cursor: pointer;",
-  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;"
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/bean-picker.ts",
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
   "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
-  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
+  "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/grinder-picker.ts",
@@ -254,27 +260,32 @@
  {
   "file": "dye2-plugin/src/pages/roasters.ts",
   "find": "    text-align: center;\n    color: var(--mimoja-blue);",
-  "replace": "    text-align: center;\n    color: var(--dye-label);"
+  "replace": "    text-align: center;\n    color: var(--dye-label);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/roasters.ts",
   "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    border-color: var(--mimoja-blue);",
-  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);"
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/roasters.ts",
   "find": "    border-color: var(--mimoja-blue);\n    color: #fff;",
-  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);"
+  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/roasters.ts",
   "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
-  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/roasters.ts",
   "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    cursor: pointer;",
-  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;"
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/utils/date-picker.ts",
@@ -327,12 +338,19 @@
  {
   "file": "dye2-plugin/src/utils/shared-components.ts",
   "find": "  .dye-stepper-label { font-weight: 700; font-size: 24px; color: var(--mimoja-blue); }",
-  "replace": "  .dye-stepper-label { font-weight: 700; font-size: 24px; color: var(--dye-label); }"
+  "replace": "  .dye-stepper-label { font-weight: 700; font-size: 24px; color: var(--dye-label); }",
+  "alts": [
+   {
+    "find": "  .dye-stepper-label { font-weight: 700; font-size: 25.5px; color: var(--mimoja-blue); }",
+    "replace": "  .dye-stepper-label { font-weight: 700; font-size: 25.5px; color: var(--dye-label); }"
+   }
+  ]
  },
  {
   "file": "dye2-plugin/src/utils/shared-components.ts",
   "find": "  .dye-preset.dye-preset-active { color: var(--mimoja-blue); font-weight: 700; }",
-  "replace": "  .dye-preset.dye-preset-active { color: var(--dye-label); font-weight: 700; }"
+  "replace": "  .dye-preset.dye-preset-active { color: var(--dye-label); font-weight: 700; }",
+  "skip_if_absent": true
  },
  {
   "file": "dye2-plugin/src/pages/add-bean.ts",
@@ -654,7 +672,8 @@
  {
   "file": "dye2-plugin/src/pages/auto-fav-edit.ts",
   "find": "    background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff;",
-  "replace": "    background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent);"
+  "replace": "    background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent);",
+  "moved_to": "dye2-plugin/src/utils/shared-components.ts"
  },
  {
   "file": "dye2-plugin/src/pages/auto-fav-edit.ts",
@@ -726,7 +745,13 @@
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "  .re-show-streamline.on  { background: var(--mimoja-blue); color: #fff; }",
-  "replace": "  .re-show-streamline.on  { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+  "replace": "  .re-show-streamline.on  { background: var(--mimoja-blue); color: var(--dye-on-accent); }",
+  "alts": [
+   {
+    "find": "  .re-show-streamline.on  { background: var(--box-color); color: var(--mimoja-blue); }",
+    "replace": "  .re-show-streamline.on  { background: var(--box-color); color: var(--dye-label); }"
+   }
+  ]
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",

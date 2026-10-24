@@ -18,8 +18,25 @@ export function apply({ root, repoRoot }) {
   const rules = JSON.parse(read('restyle.rules.json'))
   for (const [i, rule] of rules.entries()) {
     if (themed ? rule.skip_themed : rule.only_themed) continue
-    const find = themed && rule.find_themed ? rule.find_themed : rule.find
-    replaceOnce(join(root, rule.file), find, rule.replace, `restyle rule ${i} (${rule.file})`)
+    let find = themed && rule.find_themed ? rule.find_themed : rule.find
+    let replace = rule.replace
+    let file = join(root, rule.file)
+    const has = (f, text) => readFileSync(f, 'utf8').includes(text)
+    // alts: edits for when upstream reworded the anchor line (first one present wins).
+    if (!has(file, find)) {
+      const alt = (rule.alts || []).find((a) => has(file, a.find))
+      if (alt) ({ find, replace } = alt)
+    }
+    // skip_if_absent: upstream removed the thing this rule restyled (its new look already fits).
+    if (rule.skip_if_absent && !has(file, find)) continue
+    // moved_to: DYE2 v0.1.26 moved shared CSS (picker styles, fav-number buttons) into
+    // shared-components.ts. If the anchor is gone from its old file, apply the rule at the new
+    // home; if an earlier rule already applied the identical edit there, there is nothing to do.
+    if (rule.moved_to && !has(file, find)) {
+      file = join(root, rule.moved_to)
+      if (!has(file, find) && has(file, replace)) continue
+    }
+    replaceOnce(file, find, replace, `restyle rule ${i} (${rule.file})`)
   }
   if (themed) {
     replaceOnce(
