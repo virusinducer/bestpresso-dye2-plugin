@@ -12,6 +12,7 @@ a Decaid plugin plus a patched skin, rebuilt automatically whenever either upstr
   green look and OLED: pure black with a #cbcb13 accent. OLED is a second, recoloured stylesheet generated after the
   build (`patches/bestpresso/05-oled-theme.mjs`, `assets/skin/oled*`, `patches/dye2/05-oled-look.mjs`); Classic is untouched.
   Delete those files to drop OLED.
+- **Changelog.** [CHANGELOG.md](CHANGELOG.md) lists this fork's changes and, added on every build, the upstream Bestpresso and DYE2 notes.
 - **Updates itself.** Every 6 hours a workflow checks `xinghendri/bestpresso` and `decentespresso/dye2` for new
   tags (betas and patches included), rebuilds both, tests them and publishes.
 

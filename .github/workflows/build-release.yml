@@ -114,6 +114,17 @@ jobs:
           git commit -q -m "Skin ${{ steps.versions.outputs.skin }} with the DYE2 button"
           git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" dist
 
+      - name: Collect upstream notes
+        if: steps.gate.outputs.publish == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          node scripts/changelog.mjs
+          --bestpresso "${{ steps.upstream.outputs.bestpresso }}"
+          --dye2 "${{ steps.upstream.outputs.dye2 }}"
+          --write --notes out/notes.md
+
       - name: Record what was built
         if: steps.gate.outputs.publish == 'true'
         env:
@@ -129,7 +140,7 @@ jobs:
           '
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add upstream.json
+          git add upstream.json CHANGELOG.md
           git diff --cached --quiet || git commit -q -m "Built from Bestpresso ${{ steps.upstream.outputs.bestpresso }} and DYE2 ${{ steps.upstream.outputs.dye2 }}"
           git push -q origin HEAD:main
 
@@ -149,9 +160,10 @@ jobs:
             if [ "$EVENT" = "schedule" ]; then echo "$tag already released"; exit 0; fi
             gh release delete "$tag" --cleanup-tag --yes
           fi
-          gh release create "$tag" out/dye2.reaplugin-"$tag".zip \
-            --title "$tag" \
-            --notes "DYE2 $DYE2_TAG by Mark Chau (decentespresso/dye2), restyled for Bestpresso, with the DYE2 button endpoint. Matching skin: virusinducer/bestpresso-dye2-skin (Bestpresso $BESTPRESSO_TAG by Hendri)."
+          notes="DYE2 $DYE2_TAG by Mark Chau (decentespresso/dye2), restyled for Bestpresso, with the DYE2 button endpoint. Matching skin: virusinducer/bestpresso-dye2-skin (Bestpresso $BESTPRESSO_TAG by Hendri)."
+          if [ -s out/notes.md ]; then notes="$notes"$'\n\n'"$(cat out/notes.md)"; fi
+          notes="$notes"$'\n\n'"Full history of this fork and upstream: https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md"
+          gh release create "$tag" out/dye2.reaplugin-"$tag".zip --title "$tag" --notes "$notes"
 
       - name: Open an issue when the build fails
         if: failure()
