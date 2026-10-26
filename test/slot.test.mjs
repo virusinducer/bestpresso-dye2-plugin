@@ -31,7 +31,8 @@ function fakeDom(href) {
     appendChild(child) { this.children.push(child); return child },
   })
   const head = make()
-  const document = { head, createElement: make, getElementById: (id) => head.children.find((c) => c.id === id) || null }
+  const root = { look: null, getAttribute(k) { return k === 'data-look' ? this.look : null } }
+  const document = { head, documentElement: root, createElement: make, getElementById: (id) => head.children.find((c) => c.id === id) || null }
   const window = { location: { href }, document }
   window.window = window
   return { window, document, head }
@@ -49,8 +50,18 @@ test('button script mounts one button that opens the DYE2 dashboard with a retur
   button.listeners.click()
   assert.equal(
     window.location.href,
-    'http://tablet:8080/api/v1/plugins/dye2.reaplugin/dashboard?return=' + encodeURIComponent('http://tablet:3000/?page=home'),
+    'http://tablet:8080/api/v1/plugins/dye2.reaplugin/dashboard?look=oled&return=' + encodeURIComponent('http://tablet:3000/?page=home'),
   )
+})
+
+test('button passes the skin look on to DYE2', () => {
+  const { window, document } = fakeDom('http://tablet:3000/')
+  document.documentElement.look = 'classic'
+  vm.runInNewContext(readFileSync('assets/plugin/bestpresso-button.js', 'utf8'), { window, document })
+  const slot = document.createElement('span')
+  window.__bestpressoDye2.mount(slot, { apiBase: 'http://tablet:8080/api/v1' })
+  slot.children[0].listeners.click()
+  assert.match(window.location.href, /dashboard\?look=classic&return=/)
 })
 
 test('button script is idempotent when loaded twice', () => {

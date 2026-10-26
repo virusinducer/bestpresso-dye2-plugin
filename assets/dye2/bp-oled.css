@@ -1,0 +1,52 @@
+/* ===== OLED look for DYE2 (html[data-bp-look="oled"]): jet black, #cbcb13 accent, neutral greys ===== */
+html[data-bp-look="oled"] {
+  --bgmain-color: #000;
+  --mimoja-blue: #cbcb13;
+  --dye-on-accent: #000;
+  --box-color: #0a0a0a;
+  --profile-button-background-color: #151515;
+  --profile-button-outline-color: rgba(203,203,19,.34);
+  --dye-surface: rgba(255,255,255,.05);
+  --dye-border: rgba(203,203,19,.34);
+  --dye-chart-green: #cbcb13;
+  caret-color: #cbcb13;
+}
+html[data-bp-look="oled"] { background: #000 !important; }
+html[data-bp-look="oled"] body { background: #000 !important; }
+html[data-bp-look="oled"] .bg-white { background-color: #0a0a0a !important; }
+html[data-bp-look="oled"] .bg-white.opacity-40 { background-color: #0d0d03 !important; }
+html[data-bp-look="oled"] [class*="bg-[#EDEDED]"], html[data-bp-look="oled"] [class*="bg-[#EDF0F4]"] { background: #151515 !important; }
+/* outlined pills: yellow tint, yellow outline, yellow text */
+html[data-bp-look="oled"] [class*="border-[var(--mimoja-blue)]"]:not([class*="bg-[var(--mimoja-blue)]"]):not(input):not(textarea):not(select) {
+  background: rgba(203,203,19,.14) !important; border-color: rgba(203,203,19,.6) !important; color: #cbcb13 !important; }
+html[data-bp-look="oled"] .dye-dash-dropdown { background: #0a0a0a !important; border: 1px solid rgba(203,203,19,.4) !important; }
+html[data-bp-look="oled"] .dye-dash-dropdown-item + .dye-dash-dropdown-item { border-top-color: rgba(203,203,19,.25) !important; }
+html[data-bp-look="oled"] .dye-dash-dropdown-item:hover { background: rgba(203,203,19,.22) !important; }
+html[data-bp-look="oled"] [class*="modal"]:not([class*="backdrop"]):not([class*="actions"]):not([class*="error"]):not([class*="btn"]):not([class*="close"]),
+html[data-bp-look="oled"] .viz-overlay > div, html[data-bp-look="oled"] #dye-note-overlay > div, html[data-bp-look="oled"] #dye-add-note-overlay > div {
+  background-color: #0a0a0a !important; border: 1px solid rgba(203,203,19,.4); }
+html[data-bp-look="oled"] [class*="w-[72px]"][class*="h-[72px]"] { background: #151515 !important; }
+html[data-bp-look="oled"] .dye-star:not([fill="none"]) { fill: #cbcb13 !important; stroke: #cbcb13 !important; }
+html[data-bp-look="oled"] input:focus, html[data-bp-look="oled"] textarea:focus, html[data-bp-look="oled"] select:focus,
+html[data-bp-look="oled"] [contenteditable="true"]:focus { background: #151515 !important; caret-color: #cbcb13; }
+html[data-bp-look="oled"] .dye-form-input-wrap:focus-within, html[data-bp-look="oled"] .re-input-row:focus-within {
+  background: #101010 !important; border-color: #cbcb13; }
+/* section and pane borders: yellow-tinted instead of faint white */
+html[data-bp-look="oled"] .border, html[data-bp-look="oled"] [class*="border-t"], html[data-bp-look="oled"] [class*="border-b"],
+html[data-bp-look="oled"] [class*="border-l"], html[data-bp-look="oled"] [class*="border-r"], html[data-bp-look="oled"] hr {
+  border-color: rgba(203,203,19,.3); }
+html[data-bp-look="oled"] .dye-form-input-wrap, html[data-bp-look="oled"] .re-input-row { border-color: rgba(203,203,19,.3); }
+/* bean-picker batch selection (inline green upstream) */
+html[data-bp-look="oled"] .picker-batch[style*="border-color"] { border-color: #cbcb13 !important; background: #14140a !important; }
+html[data-bp-look="oled"] span[style*="#2ecc71"] { color: #cbcb13 !important; }
+html[data-bp-look="oled"] .viz-status.success { color: #cbcb13; }
+/* value slider dialog (bp-slider) */
+html[data-bp-look="oled"] dialog.bp-adj { background: #000; }
+html[data-bp-look="oled"] .bp-adj__save { border-color: #cbcb13; color: #cbcb13; background: rgba(203,203,19,.14); }
+html[data-bp-look="oled"] .bp-adj__save:hover:not(:disabled) { background: rgba(203,203,19,.26); }
+html[data-bp-look="oled"] .bp-adj__cancel { background: #151515; }
+html[data-bp-look="oled"] .bp-adj__keys button { background: #151515; }
+html[data-bp-look="oled"] .bp-adj__keys button:active { background: #262626; }
+html[data-bp-look="oled"] .bp-adj__preset { background: #151515; }
+html[data-bp-look="oled"] .bp-adj__preset:hover, html[data-bp-look="oled"] .bp-adj__preset--active { background: #262610; }
+html[data-bp-look="oled"] .bp-adj__hint span { background: #1a1a1a; }

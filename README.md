@@ -8,6 +8,10 @@ a Decaid plugin plus a patched skin, rebuilt automatically whenever either upstr
 - **Tapping it opens DYE2** with a return link, so you land back in Bestpresso.
 - **Bestpresso look for DYE2.** Dark theme, green accents and the Bestpresso-style value slider are applied
   to DYE2 at build time (`patches/dye2/03-restyle.mjs`, rules in `assets/dye2/`).
+- **Classic or OLED.** Settings > App experience > Look switches the skin (and DYE2, via the button) between the stock
+  green look and OLED: pure black with a #cbcb13 accent. OLED is a second, recoloured stylesheet generated after the
+  build (`patches/bestpresso/05-oled-theme.mjs`, `assets/skin/oled*`, `patches/dye2/05-oled-look.mjs`); Classic is untouched.
+  Delete those files to drop OLED.
 - **Updates itself.** Every 6 hours a workflow checks `xinghendri/bestpresso` and `decentespresso/dye2` for new
   tags (betas and patches included), rebuilds both, tests them and publishes.
 

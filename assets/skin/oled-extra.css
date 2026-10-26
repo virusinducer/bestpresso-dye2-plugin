@@ -1,0 +1,18 @@
+/* OLED look: hand-tuned rules on top of the generated recolour. Every selector is prefixed with the OLED scope at build time. */
+html,html body{background:#000}
+.app-shell{background:#000}
+:root{--card-surface:linear-gradient(145deg,#0d0d0d,#070707);--card-outline:rgba(203,203,19,.38)}
+.reservoir-meter{background:#0d0d0d;outline:1px solid rgba(203,203,19,.38);outline-offset:-1px}
+.reservoir-meter__level{background:#cbcb13;box-shadow:0 -8px 20px rgba(203,203,19,.2)}
+.reservoir-meter--warning .reservoir-meter__level{background:#e8892e;box-shadow:0 -8px 22px rgba(232,137,46,.3)}
+.reservoir-meter--needs-water .reservoir-meter__level{background:#de6161;box-shadow:0 -8px 22px rgba(222,97,97,.34)}
+.ins-entry-card{border-color:rgba(203,203,19,.34)}
+.drink-card__steam-secondary{border-color:rgba(203,203,19,.28)}
+.profile-card:not(.profile-card--active){background:rgba(34,34,10,.92);border-color:rgba(203,203,19,.4)}
+.profile-card:not(.profile-card--active):is(.profile-card--far-left,.profile-card--far-right){background:rgba(28,28,9,.8);border-color:rgba(203,203,19,.26)}
+/* Active profile card: solid fill identical to the water bar, dark text, red pressure line, blue flow line */
+.profile-card--active::before{background:#cbcb13;animation:none}
+.profile-card--active::after{background:none;box-shadow:none}
+.profile-card--active h1{color:#000}
+.profile-card--active .profile-target-line--pressure{stroke:#d11a1a}
+.profile-card--active .profile-target-line--flow{stroke:#1d4f91}
