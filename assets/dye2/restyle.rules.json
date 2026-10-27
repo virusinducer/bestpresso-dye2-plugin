@@ -778,7 +778,13 @@
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",
   "find": "function makeValueEditable(valueId, min, max, formatter) {",
-  "replace": "function makeValueEditable(valueId, min, max, formatter, onChange) {\n  if (!window.bpSlider) return bpOrigMakeValueEditable(valueId, min, max, formatter, onChange);\n  const valEl = document.getElementById(valueId);\n  if (!valEl || valEl.dataset.editable) return;\n  valEl.dataset.editable = '1';\n  valEl.style.cursor = 'pointer';\n  valEl.addEventListener('click', (e) => {\n    e.stopPropagation();\n    window.bpSlider.openField(valueId, valEl, min, max, formatter, (v) => {\n      valEl.textContent = formatter(v);\n      if (typeof onChange === 'function') onChange(v);\n      else if (typeof syncPresetActive === 'function') syncPresetActive(valueId.replace('-value', ''), formatter(v));\n    });\n  });\n}\nfunction bpOrigMakeValueEditable(valueId, min, max, formatter) {"
+  "replace": "function makeValueEditable(valueId, min, max, formatter, onChange) {\n  if (!window.bpSlider) return bpOrigMakeValueEditable(valueId, min, max, formatter, onChange);\n  const valEl = document.getElementById(valueId);\n  if (!valEl || valEl.dataset.editable) return;\n  valEl.dataset.editable = '1';\n  valEl.style.cursor = 'pointer';\n  valEl.addEventListener('click', (e) => {\n    e.stopPropagation();\n    window.bpSlider.openField(valueId, valEl, min, max, formatter, (v) => {\n      valEl.textContent = formatter(v);\n      if (typeof onChange === 'function') onChange(v);\n      else if (typeof syncPresetActive === 'function') syncPresetActive(valueId.replace('-value', ''), formatter(v));\n    });\n  });\n}\nfunction bpOrigMakeValueEditable(valueId, min, max, formatter) {",
+  "alts": [
+   {
+    "find": "function makeValueEditable(valueId, min, max, formatter, allowText) {",
+    "replace": "function makeValueEditable(valueId, min, max, formatter, allowText) {\n  if (!window.bpSlider || allowText) return bpOrigMakeValueEditable(valueId, min, max, formatter, allowText);\n  const valEl = document.getElementById(valueId);\n  if (!valEl || valEl.dataset.editable) return;\n  valEl.dataset.editable = '1';\n  valEl.style.cursor = 'pointer';\n  valEl.addEventListener('click', (e) => {\n    e.stopPropagation();\n    window.bpSlider.openField(valueId, valEl, min, max, formatter, (v) => {\n      valEl.textContent = formatter(v);\n      if (typeof syncPresetActive === 'function') syncPresetActive(valueId.replace('-value', ''), formatter(v));\n    });\n  });\n}\nfunction bpOrigMakeValueEditable(valueId, min, max, formatter, allowText) {"
+   }
+  ]
  },
  {
   "file": "dye2-plugin/src/pages/recipe-edit.ts",

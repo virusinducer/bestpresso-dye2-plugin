@@ -90,9 +90,17 @@ export function apply({ root, repoRoot }) {
   )
 
   // 4. Tap-a-number opens the slider (falls back to the original editor).
-  const head = 'function makeValueEditable(valueId, min, max, formatter, onChange) {\n'
+  // DYE2 v0.1.31 added allowText (free-text fields): those keep upstream's own editor, so the
+  // snippet for that signature hands them back to the original.
+  const heads = [
+    ['function makeValueEditable(valueId, min, max, formatter, onChange, allowText) {\n', 'make-value-editable-text.js'],
+    ['function makeValueEditable(valueId, min, max, formatter, onChange) {\n', 'make-value-editable.js'],
+  ]
   for (const page of ['dashboard.ts', 'edit-shot.ts']) {
-    replaceOnce(join(src, 'pages', page), head, head + read('make-value-editable.js'), `makeValueEditable in ${page}`)
+    const file = join(src, 'pages', page)
+    const text = readFileSync(file, 'utf8')
+    const [head, asset] = heads.find(([h]) => text.includes(h)) || heads[1]
+    replaceOnce(file, head, head + read(asset), `makeValueEditable in ${page}`)
   }
 
   // 5. Carry the basket chosen for the shot into its annotations.

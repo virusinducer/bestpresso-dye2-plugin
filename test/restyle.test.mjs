@@ -5,7 +5,7 @@ import { readFileSync, existsSync } from 'node:fs'
 const dir = new URL('../assets/dye2/', import.meta.url)
 
 test('restyle assets are present', () => {
-  for (const f of ['restyle.rules.json', 'bp-look.css', 'bp-slider.css', 'bp-slider.js', 'make-value-editable.js', 'basket-seed.js']) {
+  for (const f of ['restyle.rules.json', 'bp-look.css', 'bp-slider.css', 'bp-slider.js', 'make-value-editable.js', 'make-value-editable-text.js', 'basket-seed.js']) {
     assert.ok(existsSync(new URL(f, dir)), f)
   }
 })
