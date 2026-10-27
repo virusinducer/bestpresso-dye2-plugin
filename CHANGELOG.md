@@ -44,6 +44,13 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-10-27 - Bestpresso v0.1.32-patch005, DYE2 v0.1.31
+
+### Upstream DYE2 v0.1.30 to v0.1.31
+
+- Hide rail arrows when pills fit, drop the dead stepper arrows
+- Keep a grind setting as typed, dots and all
+
 ## 2026-10-26 - Bestpresso v0.1.32-patch005, DYE2 v0.1.30
 
 ### Upstream Bestpresso (v0.1.32 and patches 001 to 005)
