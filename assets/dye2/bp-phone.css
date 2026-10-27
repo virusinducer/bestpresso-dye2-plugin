@@ -1,18 +1,22 @@
 /* Portrait and phone layout for the DYE2 pages (classes are set by bp-phone.js; stock layout is untouched without them). */
 html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-1\/2.shrink-0),
+html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-\[720px\].shrink-0),
 html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-\[960px\]) {
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
 }
 html.bp-phone-p .flex.flex-1.overflow-hidden > .w-1\/2.shrink-0,
+html.bp-phone-p .flex.flex-1.overflow-hidden > .w-\[720px\].shrink-0,
 html.bp-phone-p .flex.flex-1.overflow-hidden > .w-\[960px\] {
   width: 100%;
   flex: 0 0 auto;
   border-right: 0;
   border-bottom: 1px solid var(--profile-button-outline-color);
 }
-html.bp-phone-p .flex.flex-1.overflow-hidden > .flex-1 { flex: 0 0 auto; }
+html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-1\/2.shrink-0) > .flex-1,
+html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-\[720px\].shrink-0) > .flex-1,
+html.bp-phone-p .flex.flex-1.overflow-hidden:has(> .w-\[960px\]) > .flex-1 { flex: 0 0 auto; }
 html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div,
 html.bp-phone-l #dye-dash-root > .flex.flex-1.overflow-hidden > div > div {
   overflow-y: auto;
@@ -36,3 +40,12 @@ html.bp-phone-p .border-t.h-\[90px\] { gap: 10px; padding-inline: 24px; }
 html.bp-phone-p .border-t.h-\[90px\] button { white-space: nowrap; padding-inline: 16px; font-size: 20px; }
 html.bp-phone-p #es-save-btn { padding-inline: 22px; font-size: 20px; }
 html.bp-phone-p #es-cancel-btn { padding-inline: 14px; font-size: 20px; }
+/* Auto favourites: the "group by" tabs wrap under their label and share the row. */
+html.bp-phone-p .dye-tab-strip { flex-direction: column; align-items: stretch; gap: 12px; padding-right: 0; }
+html.bp-phone-p .dye-tab-group { gap: 10px; width: 100%; }
+html.bp-phone-p .dye-tab-btn { flex: 1 1 0; width: auto; min-width: 0; padding-inline: 8px; }
+/* Recipe editor footer: the "Show on Streamline Dashboard" label wraps inside its pill. */
+html.bp-phone-p .re-show-streamline { padding: 0 14px 0 12px; gap: 10px; }
+html.bp-phone-p .re-show-streamline > span:last-child { font-size: 17px; line-height: 1.15; white-space: normal; }
+html.bp-phone-p .dye-tab-strip, html.bp-phone-p .dye-tab-group { min-width: 0; }
+html.bp-phone-p .dye-tab-label { white-space: normal; }

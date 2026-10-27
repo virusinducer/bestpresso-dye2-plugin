@@ -2,7 +2,7 @@
    Rendered in a <dialog> (top layer) so it covers the whole screen, unaffected by DYE2's scaled page. */
 dialog.bp-adj { position:fixed; inset:0; z-index:9000; width:100%; height:100%; max-width:none; max-height:none; margin:0; border:0; box-sizing:border-box; padding:24px; overflow:hidden; color:#d0d0d0; font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:radial-gradient(circle at 16% 16%,#060707 0,#141414 22%,transparent 50%),linear-gradient(124deg,#181818 36%,#4d4038 100%); }
 dialog.bp-adj:not([open]) { display:none; }
-dialog.bp-adj[open] { display:grid; grid-template-rows:clamp(76px,12vh,104px) minmax(0,1fr) clamp(84px,15vh,116px); }
+dialog.bp-adj[open] { display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:clamp(76px,12vh,104px) minmax(0,1fr) clamp(84px,15vh,116px); }
 dialog.bp-adj::backdrop { background:transparent; }
 .bp-adj *, .bp-adj *::before, .bp-adj *::after { box-sizing:border-box; }
 .bp-adj [hidden] { display:none !important; }
