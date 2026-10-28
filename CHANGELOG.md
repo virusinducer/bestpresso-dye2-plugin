@@ -44,6 +44,15 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-10-28 - Bestpresso v0.1.32-patch005, DYE2 v0.1.32
+
+### Upstream DYE2 v0.1.31 to v0.1.32
+
+- One rule for "on the strip", so DYE2 and the R strip agree
+- A recipe naming no bean clears the live bean
+- A saved favourite with no bean clears the live bean
+- Read the machine's settings once per save, not twice
+
 ## 2026-10-27 - Bestpresso v0.1.32-patch005, DYE2 v0.1.31
 
 ### Upstream DYE2 v0.1.30 to v0.1.31
