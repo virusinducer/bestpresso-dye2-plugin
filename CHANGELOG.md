@@ -44,6 +44,24 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-10-30 - Bestpresso v0.1.32-patch005, DYE2 v0.1.33
+
+### Upstream DYE2 v0.1.32 to v0.1.33
+
+- A basket picked during a dial-in is recorded onto the recipe
+- A basket picked since the apply stars the recipe cell
+- Adding support to jump into past shots
+- Swap Plotly for ECharts on the dashboard shot chart
+- Keep cached measurements across a search/Same-Beans reload
+- Shot history filter drawer (Bean / Roaster / Grinder / Profile)
+- Add a Rating filter to the search popup
+- Show count on a single match, clear one filter at a time
+- Profile and Rating filters were silently dropped from every request
+- Reselecting an already-picked filter field didn't reopen its dropdown
+- Narrow the other filter dropdowns to what's still reachable
+- ProfileFingerprint ignored key order, missing #38's fix on synced recipes
+- Setting's minus button didn't line up under the Grinder field
+
 ## 2026-10-28 - Bestpresso v0.1.32-patch005, DYE2 v0.1.32
 
 ### Upstream DYE2 v0.1.31 to v0.1.32
