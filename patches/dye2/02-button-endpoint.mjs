@@ -23,16 +23,17 @@ export function renderBestpressoButton(request: HttpRequest): HttpResponse {
 `,
   )
   const plugin = join(src, 'plugin.ts')
+  // Anchor on lines that do not depend on DYE2's chart library (Plotly became ECharts in v0.1.33).
   replaceOnce(
     plugin,
-    'import { renderPlotlyAsset } from "./utils/plotly-asset";',
-    'import { renderPlotlyAsset } from "./utils/plotly-asset";\nimport { renderBestpressoButton } from "./utils/bestpresso-button";',
-    'plotly-asset import',
+    '/// <reference path="./host.d.ts" />\n',
+    '/// <reference path="./host.d.ts" />\nimport { renderBestpressoButton } from "./utils/bestpresso-button";\n',
+    'host.d.ts reference',
   )
   replaceOnce(
     plugin,
-    '        case "plotly":\n          return renderPlotlyAsset(request);',
-    '        case "plotly":\n          return renderPlotlyAsset(request);\n\n        case "bestpresso-button":\n          return renderBestpressoButton(request);',
-    'plotly case',
+    '        case "skin":\n',
+    '        case "bestpresso-button":\n          return renderBestpressoButton(request);\n\n        case "skin":\n',
+    'skin case',
   )
 }

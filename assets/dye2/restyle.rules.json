@@ -442,7 +442,13 @@
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
   "find": "            <button id=\"dye-search-btn\" class=\"text-[var(--mimoja-blue)] cursor-pointer\">",
-  "replace": "            <button id=\"dye-search-btn\" class=\"text-[var(--dye-label)] cursor-pointer\">"
+  "replace": "            <button id=\"dye-search-btn\" class=\"text-[var(--dye-label)] cursor-pointer\">",
+  "alts": [
+   {
+    "find": "            <button id=\"dye-search-btn\" class=\"relative text-[var(--mimoja-blue)] cursor-pointer\">",
+    "replace": "            <button id=\"dye-search-btn\" class=\"relative text-[var(--dye-label)] cursor-pointer\">"
+   }
+  ]
  },
  {
   "file": "dye2-plugin/src/pages/dashboard.ts",
