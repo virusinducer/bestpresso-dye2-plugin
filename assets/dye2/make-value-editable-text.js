@@ -4,13 +4,14 @@
     const tEl = document.getElementById(valueId);
     if (!tEl || tEl.dataset.editable) return;
     tEl.addEventListener('click', (e) => {
-      const t = tEl.textContent.trim();
+      const t = window.bpVal(tEl).trim();
       if (t !== '' && t !== '—' && !isNumericText(t)) return;
       if (tEl.querySelector('input')) return;
       e.stopImmediatePropagation();
       e.stopPropagation();
+      if (tEl.blur) tEl.blur(); // dismiss the keyboard the focus just raised
       window.bpSlider.openField(valueId, tEl, min, max, formatter, (v) => {
-        tEl.textContent = formatter(v);
+        window.bpSetVal(tEl, formatter(v));
         if (typeof onChange === 'function') onChange(v);
       });
     });
@@ -20,10 +21,12 @@
   if (!valEl || valEl.dataset.editable) return;
   valEl.dataset.editable = '1';
   valEl.style.cursor = 'pointer';
+  if (valEl.tagName === 'INPUT') valEl.readOnly = true; // the slider is the editor: no keyboard
   valEl.addEventListener('click', (e) => {
     e.stopPropagation();
+    if (valEl.blur) valEl.blur();
     window.bpSlider.openField(valueId, valEl, min, max, formatter, (v) => {
-      valEl.textContent = formatter(v);
+      window.bpSetVal(valEl, formatter(v));
       if (typeof onChange === 'function') onChange(v);
       else if (typeof syncPresetActive === 'function') syncPresetActive(valueId.replace('-value', ''), formatter(v));
     });

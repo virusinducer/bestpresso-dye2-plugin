@@ -10,6 +10,10 @@
   var STORE_KEY = 'dye2.bpSlider.v1';
   var MAX_SUGG = 8;
   var current = null;
+  /* DYE2 v0.1.34 made the stepper values real <input>s (it was a <span>): read and write either. */
+  function bpVal(el) { return el ? (el.tagName === 'INPUT' ? el.value : el.textContent) : ''; }
+  function bpSetVal(el, v) { if (!el) return; if (el.tagName === 'INPUT') el.value = v; else el.textContent = v; }
+  window.bpVal = bpVal; window.bpSetVal = bpSetVal;
 
   /* ------------------------------------------------------------------ pure logic (unit-tested) */
   function decimalsOf(x) {
@@ -463,7 +467,7 @@
   /* ------------------------------------------------------------------ DYE2 fields */
   function doseHint(doseId) {
     return function (v) {
-      var d = parseFloat((document.getElementById(doseId) || {}).textContent);
+      var d = parseFloat(bpVal(document.getElementById(doseId)));
       return d > 0 && v > 0 ? '1:' + (v / d).toFixed(1) + ' ratio' : '';
     };
   }
@@ -508,7 +512,7 @@
   }
   function openField(id, valEl, min, max, formatter, onSave) {
     var c = fieldConfig(id, min, max);
-    var cur = parseFloat(valEl.textContent);
+    var cur = parseFloat(bpVal(valEl));
     c.value = isFinite(cur) ? cur : NaN;
     c.onSave = onSave;
     open(c);
