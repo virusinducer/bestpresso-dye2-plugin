@@ -44,6 +44,18 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-03 - Bestpresso v0.1.32-patch005, DYE2 v0.1.34
+
+### Upstream DYE2 v0.1.33 to v0.1.34
+
+- Recipe star missed steam/hot-water/flush drift, basket only
+- DONE could leave before a picker-return apply finished
+- Slot picker pins the favourite, not an unrelated recipe
+- Add a feed rate field alongside Setting/RPM
+- Feed rate field on the grinder record, long-press to edit from dashboard
+- Tap-to-edit stepper values are real inputs, not span-grows-input
+- An assigned bean missing from the loaded list looked unselected
+
 ## 2026-10-30 - Bestpresso v0.1.32-patch005, DYE2 v0.1.33
 
 ### Upstream DYE2 v0.1.32 to v0.1.33
