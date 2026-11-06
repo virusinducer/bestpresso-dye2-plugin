@@ -44,6 +44,18 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-06 - Bestpresso v0.1.32-patch005, DYE2 v0.1.35
+
+### Upstream DYE2 v0.1.34 to v0.1.35
+
+- A recipe pill tap didn't reliably keep its own highlight
+- List every ranked auto-favourite, no top-5 cap
+- Only the two fields that encode steam-off are withheld
+- A shot older than the 50 newest opened the newest shot instead
+- Off-roast count was shifted a day, and grouped a new bag as a new favourite
+- A recipe with steam time 0 could leave the heater on
+- Four defects in the #44/#45/#46 fixes themselves
+
 ## 2026-11-03 - Bestpresso v0.1.32-patch005, DYE2 v0.1.34
 
 ### Upstream DYE2 v0.1.33 to v0.1.34
