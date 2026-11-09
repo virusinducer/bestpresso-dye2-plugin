@@ -7,7 +7,7 @@
  {
   "file": "dye2-plugin/src/pages/grinders.ts",
   "find": "    color: #fff;",
-  "replace": "    color: var(--dye-on-accent);"
+  "replace": "    color: var(--dye-on-accent);", "max_matches": 2
  },
  {
   "file": "dye2-plugin/src/pages/grinders.ts",

@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { replaceOnce } from '../../scripts/lib/patch.mjs'
+import { replaceOnce, replaceUpTo } from '../../scripts/lib/patch.mjs'
 
 // Bestpresso look for DYE2: colour/markup edits (rules derived by tools/derive-restyle.py), a
 // Bestpresso-look CSS block, the value slider, the basket carry-over and the +/- slider hook.
@@ -36,7 +36,8 @@ export function apply({ root, repoRoot }) {
       file = join(root, rule.moved_to)
       if (!has(file, find) && has(file, replace)) continue
     }
-    replaceOnce(file, find, replace, `restyle rule ${i} (${rule.file})`)
+    if (rule.max_matches) replaceUpTo(file, find, replace, rule.max_matches, `restyle rule ${i} (${rule.file})`)
+    else replaceOnce(file, find, replace, `restyle rule ${i} (${rule.file})`)
   }
   if (themed) {
     replaceOnce(
