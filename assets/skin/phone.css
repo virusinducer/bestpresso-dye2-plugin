@@ -284,7 +284,7 @@
   .live-brew-stage{scroll-snap-align:start;padding:12px 14px 12px}
   .history-browser-detail .live-brew-stages{--stage-strip-start-inset:0px;--stage-strip-end-inset:0px}
   .live-brew-stage header{gap:10px;padding-bottom:8px}
-  .live-brew-stage dl{grid-template-columns:repeat(2,max-content);gap:8px 22px;margin-top:8px}
+  .live-brew-stage dl,.history-browser-detail .live-brew-stage dl{grid-template-columns:repeat(2,max-content);gap:8px 22px;margin-top:8px}
   .live-brew-stage dl>div:last-child{grid-column:1/-1}
   .live-brew-stage dt{font-size:12px;line-height:15px}
   .live-brew-stage dd{margin-top:2px;font-size:20px;line-height:24px}
