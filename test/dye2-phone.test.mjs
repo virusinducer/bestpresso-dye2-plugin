@@ -73,3 +73,13 @@ test('04-phone-fit hooks the shell and writes the generated module', () => {
   assert.match(shell, /window\.__bpPhoneFit/)
   assert.match(readFileSync(join(utils, 'bp-phone.ts'), 'utf8'), /bpPhoneScript/)
 })
+
+test('06-viewport-cover: adds viewport-fit=cover to the dev shell viewport meta', async () => {
+  const { apply: applyCover } = await import('../patches/dye2/06-viewport-cover.mjs')
+  const root = mkdtempSync(join(tmpdir(), 'cover-'))
+  mkdirSync(join(root, 'dye2-plugin', 'src', 'utils'), { recursive: true })
+  const file = join(root, 'dye2-plugin', 'src', 'utils', 'dev-shell.ts')
+  writeFileSync(file, '<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=overlays-content">')
+  applyCover({ root })
+  assert.match(readFileSync(file, 'utf8'), /viewport-fit=cover/)
+})

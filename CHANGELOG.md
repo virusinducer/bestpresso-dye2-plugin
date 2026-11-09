@@ -11,7 +11,10 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 ## Fork changes
 
 ### Unreleased
-- Nothing yet.
+- Skin, iPhone: every screen except Home now keeps clear of the camera pill and the screen edges (live brew, shot detail, history, insights, settings, profile builder, pickers, toasts).
+- Skin, iPhone: the shot header and stage cards fit the screen width (Stop/Back buttons and the step card are no longer cut off).
+- Skin, iPhone: the tare button stays visible on the compact scale card when the side panel is collapsed.
+- Plugin, iPhone: DYE2 pages use `viewport-fit=cover`, so the safe-area padding now works; the Edit Shot footer wraps instead of cutting off Save Shot Data in portrait.
 
 ### 2026-10-26 - Classic / OLED look
 - Skin: new Look setting (Settings > App experience): **Classic** (stock green) or **OLED** (pure black, #cbcb13 accent). Default OLED. Classic is the untouched upstream stylesheet; OLED is a second stylesheet generated after the build. Light theme is unchanged.

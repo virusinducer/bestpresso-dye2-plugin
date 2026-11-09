@@ -208,3 +208,101 @@
   .value-adjuster__preset{flex:1 1 0;width:auto;min-width:0;max-width:72px;padding:0 2px}
   .value-adjuster__fixed-preset{flex:1 1 0;width:auto;min-width:0;max-width:142px;padding:0 6px}
 }
+
+/* ---------------------------------------------------------------------------------------------
+   Safe areas for every screen that is not the home dashboard.
+   Only .app-shell and the value editor kept clear of the Dynamic Island / notch and the home
+   indicator; the screens below drew under them, so their headers sat behind the camera pill.
+   ------------------------------------------------------------------------------------------- */
+@media (max-width:520px), (orientation:landscape) and (max-height:500px){
+  .live-brew-screen,.history-browser-screen{
+    --live-screen-inline-inset:max(16px,env(safe-area-inset-left),env(safe-area-inset-right));
+    --history-screen-inline-inset:max(16px,env(safe-area-inset-left),env(safe-area-inset-right));
+    padding-top:max(24px,env(safe-area-inset-top));
+    padding-bottom:max(24px,env(safe-area-inset-bottom));
+  }
+  /* Insights, history list and profile library share one shell */
+  .ins-shell{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+  .ins-detail-state{padding:max(30px,env(safe-area-inset-top)) max(30px,env(safe-area-inset-right)) max(30px,env(safe-area-inset-bottom)) max(30px,env(safe-area-inset-left))}
+  .settings-screen{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);padding-bottom:env(safe-area-inset-bottom)}
+  .profile-builder-screen.pb-screen{
+    padding-top:max(16px,env(safe-area-inset-top));
+    padding-left:max(16px,env(safe-area-inset-left));
+    padding-right:max(16px,env(safe-area-inset-right));
+  }
+  .scale-picker-overlay,.cleaning-picker-overlay,.decaid-update-overlay,.fullscreen-prompt-overlay,.profiles-import-backdrop{
+    padding:max(24px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));
+  }
+  .ins-notice,.pl-toast{bottom:max(22px,calc(env(safe-area-inset-bottom) + 10px))}
+}
+@media (max-width:520px){
+  .settings-sidebar{padding-top:calc(12px + env(safe-area-inset-top))}
+}
+
+/* ---------------------------------------------------------------------------------------------
+   Live brew and shot detail headers: the timer / yield / flow readout plus Stop (or Close) is wider
+   than a phone, so the button was cut off by the card edge. Stack the title above the readout and let
+   the readout shrink.
+   ------------------------------------------------------------------------------------------- */
+@media (max-width:520px){
+  .live-brew-screen{grid-template-rows:auto minmax(0,1fr) 192px;row-gap:10px}
+  .history-browser-detail{grid-template-rows:auto minmax(0,1fr) 192px;gap:10px}
+  .live-pull-header,.history-browser-detail .live-pull-header{
+    grid-template-columns:minmax(0,1fr);row-gap:4px;padding:10px 12px;border-radius:20px;overflow:visible;
+  }
+  .live-pull-header h1{font-size:17px}
+  .history-pull-title{min-width:0;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .history-pull-title time{flex:none;font-size:12px}
+  .live-pull-header__controls{width:100%;justify-content:space-between;flex-wrap:nowrap;gap:10px}
+  .live-pull-header__metrics,.live-pull-header__metrics--live,.live-pull-header__metrics--history{
+    --header-metric-separator-gap:8px;flex:1 1 0;min-width:0;width:auto;height:auto;
+  }
+  .live-pull-header__metrics--live{grid-template-columns:minmax(0,1fr) 1px minmax(0,1.6fr) 1px minmax(0,1fr)}
+  .live-pull-header__metrics--history{grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr)}
+  .live-pull-header__metrics--single{grid-template-columns:minmax(0,1fr)}
+  .live-pull-header__metrics>i{height:34px}
+  .live-pull-header__metrics span{font-size:11px;line-height:14px}
+  .live-brew-screen .live-pull-header__metrics strong,
+  .history-browser-detail .live-pull-header__metrics strong{font-size:20px}
+  .live-pull-header__metrics strong small{margin-left:2px;font-size:12px}
+  .live-pull-header__metrics strong em{margin:0 3px}
+  .live-pull-action{min-width:64px;height:44px;padding:0 14px;font-size:15px}
+
+  /* Stage cards: Yield and Temperature range share the first row, the pressure chain gets its own row,
+     so a card stays narrower than the screen. Swipe for the next card. */
+  .live-brew-stages{scroll-snap-type:x proximity}
+  .live-brew-stage{scroll-snap-align:start;padding:12px 14px 12px}
+  .history-browser-detail .live-brew-stages{--stage-strip-start-inset:0px;--stage-strip-end-inset:0px}
+  .live-brew-stage header{gap:10px;padding-bottom:8px}
+  .live-brew-stage dl{grid-template-columns:repeat(2,max-content);gap:8px 22px;margin-top:8px}
+  .live-brew-stage dl>div:last-child{grid-column:1/-1}
+  .live-brew-stage dt{font-size:12px;line-height:15px}
+  .live-brew-stage dd{margin-top:2px;font-size:20px;line-height:24px}
+  .live-brew-stage dl>div:last-child dd{font-size:20px}
+  .live-brew-stage dd small{font-size:13px}
+}
+
+/* ---------------------------------------------------------------------------------------------
+   Profile builder: Cancel / Save were pushed past the right edge by the 260px title column.
+   ------------------------------------------------------------------------------------------- */
+@media (max-width:520px){
+  .pb-topbar{grid-template-columns:minmax(0,1fr) auto}
+  .pb-topbar__identity{min-width:0}
+  .pb-topbar__actions{gap:6px;align-items:center}
+  .pb-topbar__actions button{height:40px;font-size:14px}
+  .pb-cancel,.pb-save{min-width:0;padding:0 12px}
+}
+
+/* ---------------------------------------------------------------------------------------------
+   Compact (collapsed) scale card: the tare icon sits beside the reading and was clipped by the narrow
+   card once the reading got wide ("201.2 g") or in landscape. Fit the reading to the card instead.
+   ------------------------------------------------------------------------------------------- */
+@media (max-width:520px), (orientation:landscape) and (max-height:500px){
+  .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact{container-type:inline-size}
+  .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .utility-card__metrics{left:12px;right:8px;bottom:12px}
+  .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .scale-tare-control{max-width:100%;gap:4px}
+  .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .scale-tare-control .metric{min-width:0}
+  .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .scale-tare-control__icon{width:16px;height:16px}
+  .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .metric__reading{font-size:clamp(14px,15cqw,26px);letter-spacing:-.5px}
+  .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .metric__reading small{font-size:clamp(10px,10cqw,16px);margin-left:2px}
+}
