@@ -23,10 +23,13 @@
     root.classList.toggle('bp-phone-p', portrait);
     root.classList.toggle('bp-phone-l', landscape);
     if (!portrait && !landscape) return 0;
-    var top = inset('top');
-    var bottom = inset('bottom');
-    var left = landscape ? inset('left') : 0;
-    var right = landscape ? inset('right') : 0;
+    // The iOS web view can report env() as 0 (hidden status bar) while the Dynamic Island still covers the top
+    // edge, so phones fall back to typical iPhone values. Portrait tablets (wider than 520px) keep the probe only.
+    var phone = landscape || vw <= 520;
+    var top = Math.max(inset('top'), portrait && phone ? 59 : 0);
+    var bottom = Math.max(inset('bottom'), phone ? (portrait ? 34 : 21) : 0);
+    var left = landscape ? Math.max(inset('left'), 59) : 0;
+    var right = landscape ? Math.max(inset('right'), 59) : 0;
     var designW = portrait ? Math.min(PORTRAIT_MAX_W, Math.max(PORTRAIT_MIN_W, Math.round(PORTRAIT_TARGET_H * vw / vh))) : LANDSCAPE_W;
     var s = (vw - left - right) / designW;
     var designH = (vh - top - bottom) / s;

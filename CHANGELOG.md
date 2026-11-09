@@ -11,6 +11,9 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 ## Fork changes
 
 ### Unreleased
+- iPhone follow-up: the iOS web view can report safe areas as 0, so headers still sat behind the Dynamic Island. Skin screens and DYE2 pages now fall back to typical iPhone insets (59px top, 34px bottom portrait; 59px sides, 21px bottom landscape) when the system reports less.
+- Skin, iPhone: Brew history table columns widened so Dose and Yield no longer run together.
+- Plugin, iPhone: Edit Shot footer buttons fit on one row; Drink value box widened so "201.2g" is not cut off.
 - Skin, iPhone: every screen except Home now keeps clear of the camera pill and the screen edges (live brew, shot detail, history, insights, settings, profile builder, pickers, toasts).
 - Skin, iPhone: the shot header and stage cards fit the screen width (Stop/Back buttons and the step card are no longer cut off).
 - Skin, iPhone: the tare button stays visible on the compact scale card when the side panel is collapsed.

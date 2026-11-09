@@ -49,8 +49,12 @@ html.bp-phone-p .re-show-streamline { padding: 0 14px 0 12px; gap: 10px; }
 html.bp-phone-p .re-show-streamline > span:last-child { font-size: 17px; line-height: 1.15; white-space: normal; }
 html.bp-phone-p .dye-tab-strip, html.bp-phone-p .dye-tab-group { min-width: 0; }
 html.bp-phone-p .dye-tab-label { white-space: normal; }
-/* Portrait footers (Edit Shot): the button row is wider than the design canvas, so Save was cut by the
-   screen edge. Let it wrap; Cancel and Save drop to a second row, right aligned. */
-html.bp-phone-p .border-t.h-\[90px\] { height: auto; min-height: 90px; flex-wrap: wrap; row-gap: 12px; padding-block: 14px; }
+/* Portrait footers (Edit Shot): six buttons on a ~970px design canvas. Tighter type and padding keep them on one
+   row; the wrap below is only a safety net for longer translations. */
+html.bp-phone-p .border-t.h-\[90px\] { height: auto; min-height: 90px; flex-wrap: wrap; row-gap: 10px; padding-block: 12px; padding-inline: 14px; gap: 7px; }
 html.bp-phone-p .border-t.h-\[90px\] > .flex-1 { display: none; }
-html.bp-phone-p #es-cancel-btn { margin-left: auto; }
+html.bp-phone-p .border-t.h-\[90px\] button { font-size: 16px; padding-inline: 11px; }
+html.bp-phone-p #es-save-btn { padding-inline: 14px; font-size: 17px; }
+html.bp-phone-p #es-cancel-btn { margin-left: auto; padding-inline: 12px; font-size: 17px; }
+/* Stepper value boxes were 72px wide, so "201.2g" was cut off. */
+html.bp-phone-p .dye-stepper-val { width: 104px; }

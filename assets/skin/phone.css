@@ -209,6 +209,16 @@
   .value-adjuster__fixed-preset{flex:1 1 0;width:auto;min-width:0;max-width:142px;padding:0 6px}
 }
 
+/* The iOS web view can report env(safe-area-inset-*) as 0 (hidden status bar), which left headers behind the
+   Dynamic Island. These variables use env() when it reports something and fall back to typical iPhone values
+   (portrait: island 59px top, home bar 34px; landscape: island side 59px, home bar 21px). */
+@media (max-width:520px){
+  :root{--bp-safe-top:max(env(safe-area-inset-top),59px);--bp-safe-bottom:max(env(safe-area-inset-bottom),34px);--bp-safe-left:env(safe-area-inset-left);--bp-safe-right:env(safe-area-inset-right)}
+}
+@media (orientation:landscape) and (max-height:500px){
+  :root{--bp-safe-top:env(safe-area-inset-top);--bp-safe-bottom:max(env(safe-area-inset-bottom),21px);--bp-safe-left:max(env(safe-area-inset-left),59px);--bp-safe-right:max(env(safe-area-inset-right),59px)}
+}
+
 /* ---------------------------------------------------------------------------------------------
    Safe areas for every screen that is not the home dashboard.
    Only .app-shell and the value editor kept clear of the Dynamic Island / notch and the home
@@ -216,27 +226,27 @@
    ------------------------------------------------------------------------------------------- */
 @media (max-width:520px), (orientation:landscape) and (max-height:500px){
   .live-brew-screen,.history-browser-screen{
-    --live-screen-inline-inset:max(16px,env(safe-area-inset-left),env(safe-area-inset-right));
-    --history-screen-inline-inset:max(16px,env(safe-area-inset-left),env(safe-area-inset-right));
-    padding-top:max(24px,env(safe-area-inset-top));
-    padding-bottom:max(24px,env(safe-area-inset-bottom));
+    --live-screen-inline-inset:max(16px,var(--bp-safe-left),var(--bp-safe-right));
+    --history-screen-inline-inset:max(16px,var(--bp-safe-left),var(--bp-safe-right));
+    padding-top:max(24px,var(--bp-safe-top));
+    padding-bottom:max(24px,var(--bp-safe-bottom));
   }
   /* Insights, history list and profile library share one shell */
-  .ins-shell{padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
-  .ins-detail-state{padding:max(30px,env(safe-area-inset-top)) max(30px,env(safe-area-inset-right)) max(30px,env(safe-area-inset-bottom)) max(30px,env(safe-area-inset-left))}
-  .settings-screen{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);padding-bottom:env(safe-area-inset-bottom)}
+  .ins-shell{padding:var(--bp-safe-top) var(--bp-safe-right) var(--bp-safe-bottom) var(--bp-safe-left)}
+  .ins-detail-state{padding:max(30px,var(--bp-safe-top)) max(30px,var(--bp-safe-right)) max(30px,var(--bp-safe-bottom)) max(30px,var(--bp-safe-left))}
+  .settings-screen{padding-left:var(--bp-safe-left);padding-right:var(--bp-safe-right);padding-bottom:var(--bp-safe-bottom)}
   .profile-builder-screen.pb-screen{
-    padding-top:max(16px,env(safe-area-inset-top));
-    padding-left:max(16px,env(safe-area-inset-left));
-    padding-right:max(16px,env(safe-area-inset-right));
+    padding-top:max(16px,var(--bp-safe-top));
+    padding-left:max(16px,var(--bp-safe-left));
+    padding-right:max(16px,var(--bp-safe-right));
   }
   .scale-picker-overlay,.cleaning-picker-overlay,.decaid-update-overlay,.fullscreen-prompt-overlay,.profiles-import-backdrop{
-    padding:max(24px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));
+    padding:max(24px,var(--bp-safe-top)) max(24px,var(--bp-safe-right)) max(24px,var(--bp-safe-bottom)) max(24px,var(--bp-safe-left));
   }
-  .ins-notice,.pl-toast{bottom:max(22px,calc(env(safe-area-inset-bottom) + 10px))}
+  .ins-notice,.pl-toast{bottom:max(22px,calc(var(--bp-safe-bottom) + 10px))}
 }
 @media (max-width:520px){
-  .settings-sidebar{padding-top:calc(12px + env(safe-area-inset-top))}
+  .settings-sidebar{padding-top:calc(12px + var(--bp-safe-top))}
 }
 
 /* ---------------------------------------------------------------------------------------------
@@ -305,4 +315,12 @@
   .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .scale-tare-control__icon{width:16px;height:16px}
   .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .metric__reading{font-size:clamp(14px,15cqw,26px);letter-spacing:-.5px}
   .app-shell--utilities-collapsed .utility-card--scale.utility-card--compact .metric__reading small{font-size:clamp(10px,10cqw,16px);margin-left:2px}
+}
+
+/* ---------------------------------------------------------------------------------------------
+   Brew history table: the Dose and Yield columns were too narrow, so "18.5 g" ran into "184.1 g".
+   ------------------------------------------------------------------------------------------- */
+@media (max-width:520px){
+  .ins-table-head,.ins-shot{grid-template-columns:44px minmax(0,1fr) 42px 54px 46px 12px;gap:5px;font-size:12px}
+  .ins-table-head{font-size:11px}
 }
