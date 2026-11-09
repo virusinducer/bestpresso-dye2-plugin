@@ -44,6 +44,12 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-09 - Bestpresso v0.1.32-patch005, DYE2 v0.1.36
+
+### Upstream DYE2 v0.1.35 to v0.1.36
+
+- Fix long press missing issue on grinder selection page
+
 ## 2026-11-06 - Bestpresso v0.1.32-patch005, DYE2 v0.1.35
 
 ### Upstream DYE2 v0.1.34 to v0.1.35
