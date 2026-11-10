@@ -51,6 +51,14 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-10 - Bestpresso v0.1.32-patch005, DYE2 v0.1.37
+
+### Upstream DYE2 v0.1.36 to v0.1.37
+
+- A recipe apply clears the identities it does not name
+- Range, defaults, archive, and a recipe that inherits nothing
+- Fix dashboard profile value not applied issue
+
 ## 2026-11-09 - Bestpresso v0.1.32-patch005, DYE2 v0.1.36
 
 ### Upstream DYE2 v0.1.35 to v0.1.36
