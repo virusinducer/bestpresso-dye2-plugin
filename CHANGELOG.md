@@ -53,6 +53,14 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-13 - Bestpresso v0.1.32-patch005, DYE2 v0.1.39
+
+### Upstream DYE2 v0.1.37 to v0.1.39
+
+- SAVE TO RECIPE saves the edited favourite as a recipe
+- Browser-side DYE2 logging lands in Decaid's support package
+- The recipe rail shows the whole library
+
 ## 2026-11-10 - Bestpresso v0.1.32-patch005, DYE2 v0.1.37
 
 ### Upstream DYE2 v0.1.36 to v0.1.37
