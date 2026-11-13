@@ -53,6 +53,13 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-13 - Bestpresso v0.1.32-patch005, DYE2 v0.1.40
+
+### Upstream DYE2 v0.1.39 to v0.1.40
+
+- The recipe rail ignores the Streamline-strip flag too
+- "Always display on Dashboard" pins the favourite to the F strip
+
 ## 2026-11-13 - Bestpresso v0.1.32-patch005, DYE2 v0.1.39
 
 ### Upstream DYE2 v0.1.37 to v0.1.39
