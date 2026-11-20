@@ -54,6 +54,16 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-20 - Bestpresso v0.1.32-patch005, DYE2 v0.1.42
+
+### Upstream DYE2 v0.1.40 to v0.1.42
+
+- Archive and delete a filter basket
+- Long-press edit on the picker, and cap the keyboard shift for every modal
+- Archive and delete in the picker's edit modal too
+- New set up
+- Keep a grind setting of 0 on apply
+
 ## 2026-11-13 - Bestpresso v0.1.32-patch005, DYE2 v0.1.40
 
 ### Upstream DYE2 v0.1.39 to v0.1.40
