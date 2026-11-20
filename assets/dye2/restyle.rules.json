@@ -33,33 +33,39 @@
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
+  "skip_if_absent": true,
   "find": "    text-align: center;\n    color: var(--mimoja-blue);",
   "replace": "    text-align: center;\n    color: var(--dye-label);"
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
+  "skip_if_absent": true,
   "find": "    color: #fff;",
   "replace": "    color: var(--dye-on-accent);"
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
+  "skip_if_absent": true,
   "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
   "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
+  "skip_if_absent": true,
   "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
   "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;",
   "find_themed": "    background: var(--field-bg); padding: 0 46px 0 16px;"
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
+  "skip_if_absent": true,
   "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
   "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;",
   "find_themed": "    background: var(--field-bg); padding: 0 14px; font-size: 19px;"
  },
  {
   "file": "dye2-plugin/src/pages/baskets.ts",
+  "skip_if_absent": true,
   "find": "  .dye-btn-primary { background: var(--mimoja-blue); color: #fff; }",
   "replace": "  .dye-btn-primary { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
  },

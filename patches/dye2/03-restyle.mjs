@@ -21,7 +21,7 @@ export function apply({ root, repoRoot }) {
     let find = themed && rule.find_themed ? rule.find_themed : rule.find
     let replace = rule.replace
     let file = join(root, rule.file)
-    const has = (f, text) => readFileSync(f, 'utf8').includes(text)
+    const has = (f, text) => existsSync(f) && readFileSync(f, 'utf8').includes(text)
     // alts: edits for when upstream reworded the anchor line (first one present wins).
     if (!has(file, find)) {
       const alt = (rule.alts || []).find((a) => has(file, a.find))

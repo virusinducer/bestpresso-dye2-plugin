@@ -11,6 +11,7 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 ## Fork changes
 
 ### Unreleased
+- Plugin build: DYE2 v0.1.42 removed its baskets.ts page (merged into equipment.ts), which broke the automated build. Restyle rules for baskets.ts are now skipped when the file is gone, and the restyle patch no longer crashes on a missing file.
 - Plugin: DiFluid R2 on the Edit Shot page. Find R2 scans, connects and confirms the refractometer; Read R2 measures and fills TDS and EY (EY = TDS x drink / dose) on the shot being edited. Readings at or below 0 are rejected and shown in red; R2 errors (no liquid, out of range) and disconnects are reported on the status line. Needs the R2 connected in Decaid (native driver or the difluid-r2 plugin). Remove by deleting patches/dye2/07-r2-tds.mjs.
 - Plugin: R2 event log at /api/v1/plugins/dye2.reaplugin/r2-log (last 300 lines, in memory, also mirrored into Decaid's log). Remove by deleting patches/dye2/08-r2-log.mjs.
 - Skin, iPhone: shot detail step cards no longer cut off the Pressure row (the detail page had its own larger row gap).
