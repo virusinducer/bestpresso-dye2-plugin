@@ -16,6 +16,16 @@ export function apply({ root, repoRoot }) {
   // and applies its own look on top, so upstream's dark mode is switched off below.
   const themed = existsSync(join(src, 'utils', 'theme.ts'))
   const rules = JSON.parse(read('restyle.rules.json'))
+  // DYE2 v0.1.43 swapped the fixed white on accent fills for an --on-accent token (white in light
+  // mode, the only mode this fork ships). Put the white back so the rules below still anchor.
+  const targets = new Set(rules.flatMap((r) => [r.file, r.moved_to]).filter(Boolean))
+  for (const rel of targets) {
+    const file = join(root, rel)
+    if (!existsSync(file)) continue
+    const text = readFileSync(file, 'utf8')
+    const plain = text.replace(/text-\[var\(--on-accent\)\]/g, 'text-white').replace(/color:( ?)var\(--on-accent\)/g, 'color:$1#fff')
+    if (plain !== text) writeFileSync(file, plain)
+  }
   for (const [i, rule] of rules.entries()) {
     if (themed ? rule.skip_themed : rule.only_themed) continue
     let find = themed && rule.find_themed ? rule.find_themed : rule.find
@@ -85,8 +95,8 @@ export function apply({ root, repoRoot }) {
   )
   replaceOnce(
     shell,
-    '<script>${fitScript}</script>\n  ${scripts',
-    '<script>${fitScript}</script>\n  <script>${bpSliderScript}</script>\n  ${scripts',
+    '<script>${fitScript}</script>\n',
+    '<script>${fitScript}</script>\n  <script>${bpSliderScript}</script>\n',
     'shell slider script',
   )
 
@@ -111,7 +121,9 @@ export function apply({ root, repoRoot }) {
   // 6. Segmented control: dark text on the green segment.
   replaceOnce(
     join(src, 'utils', 'shared-components.ts'),
-    'background:var(--mimoja-blue);color:#fff;',
+    readFileSync(join(src, 'utils', 'shared-components.ts'), 'utf8').includes('background:var(--mimoja-blue);color: #fff;')
+      ? 'background:var(--mimoja-blue);color: #fff;'
+      : 'background:var(--mimoja-blue);color:#fff;',
     'background:var(--mimoja-blue);color: var(--dye-on-accent);',
     'segmented control colour',
   )
