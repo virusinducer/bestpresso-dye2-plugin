@@ -1,0 +1,9 @@
+{
+  "id": "bestpresso-dye",
+  "name": "Bestpresso + DYE2",
+  "description": "A brewing-first interface for Decaid. Adds a DYE2 button next to Sleep while the DYE2 plugin is loaded.",
+  "version": "0.1.32-patch005",
+  "author": "Hendri (xinghendri/bestpresso), DYE2 button by virusinducer",
+  "repository": "https://github.com/virusinducer/bestpresso-dye2-skin",
+  "upstream": "https://github.com/xinghendri/bestpresso"
+}
