@@ -55,6 +55,20 @@ Both are rebuilt from upstream (Bestpresso by Hendri, DYE2 by Mark Chau) and ver
 
 <!-- upstream-entries -->
 
+## 2026-11-25 - Bestpresso v0.1.32-patch005, DYE2 v0.1.43
+
+### Upstream DYE2 v0.1.42 to v0.1.43
+
+- Step multi-part grind settings (dye2#49)
+- Suggest barista/drinker names from all history
+- Explain a 401 on settings save (dye2#48)
+- Use /ws/v1 path for plugin changed socket
+- Style(dark): align dark tokens with the Figma style guide
+- Style(steppers): match Streamline's - / + glyph and press flash
+- Favourite-style recipe cards; Visualizer dialog honours login
+- Cross-fade page changes; keep rail centring instant on load
+- Save as Recipe uses the shot's actual dose and drink
+
 ## 2026-11-20 - Bestpresso v0.1.32-patch005, DYE2 v0.1.42
 
 ### Upstream DYE2 v0.1.40 to v0.1.42
